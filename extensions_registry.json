@@ -1,0 +1,39 @@
+{
+  "widgets": [
+    {
+      "version": "1.0.0",
+      "title": "Report Bug",
+      "description": "A widget built with React and the Widget SDK.",
+      "category": "Custom",
+      "imageSrc": "widgets/report-bug/thumbnail.png",
+      "source": {
+        "path": "widgets/report-bug/dist",
+        "entry": "index.html"
+      },
+      "configuration": {
+        "properties": [
+          {
+            "name": "title",
+            "type": "text",
+            "label": "Title",
+            "defaultValue": "Report Bug",
+            "rules": {
+              "required": true
+            }
+          },
+          {
+            "name": "description",
+            "type": "text",
+            "label": "Description",
+            "defaultValue": "A widget built with React and the Widget SDK."
+          }
+        ]
+      },
+      "defaultConfig": {
+        "title": "Report Bug",
+        "description": "A widget built with React and the Widget SDK."
+      },
+      "type": "report-bug"
+    }
+  ]
+}
