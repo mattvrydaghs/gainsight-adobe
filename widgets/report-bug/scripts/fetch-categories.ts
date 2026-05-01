@@ -209,6 +209,7 @@ async function fetchCategoriesWithIdeas(envVars: Record<string, string>): Promis
     const categories: Category[] = [];
 
     // Process category tree recursively
+    // Only include leaf categories (non-sections), not section groupings
     const processCategories = (categories_list: any[]): void => {
       if (!categories_list || !Array.isArray(categories_list)) {
         return;
@@ -222,19 +223,21 @@ async function fetchCategoriesWithIdeas(envVars: Record<string, string>): Promis
           Array.isArray(cat.supportedContentTypes) &&
           cat.supportedContentTypes.includes("idea");
 
-        if (supportsIdeas) {
+        // Only add non-section categories (or sections with idea support and no children)
+        // Sections are groupings; we want the actual categories that can hold topics
+        if (supportsIdeas && !cat.isSection) {
           categories.push({
             id: cat.id,
             name: cat.title || cat.name,
             description: cat.description,
             image: cat.thumbnailImage || cat.heroImage || cat.image?.url || cat.thumbnail,
-            topicsCount: cat.topicsCount || 0,
+            topicsCount: 0, // Will be populated from getVisibleTopicsCount endpoint
           });
         }
 
-        // Process nested categories
-        if (cat.categories && Array.isArray(cat.categories)) {
-          processCategories(cat.categories);
+        // Process nested categories (children)
+        if (cat.children && Array.isArray(cat.children)) {
+          processCategories(cat.children);
         }
       }
     };
@@ -245,6 +248,32 @@ async function fetchCategoriesWithIdeas(envVars: Record<string, string>): Promis
     }
 
     console.log(`✅ Found ${categories.length} categories with ideas enabled`);
+
+    // Fetch visible topics count for all categories
+    console.log("📊 Fetching visible topics count...");
+    const countsResponse = await fetch(`${API_BASE_URL}/categories/getVisibleTopicsCount`, {
+      headers: {
+        Authorization: `${token.token_type} ${token.access_token}`,
+        "Content-Type": "application/json",
+      },
+    });
+
+    if (countsResponse.ok) {
+      const countsData = await countsResponse.json();
+      const topicsCountMap = countsData.result || {};
+
+      // Update categories with the actual topic counts
+      for (const category of categories) {
+        const count = topicsCountMap[category.id];
+        if (count !== undefined) {
+          category.topicsCount = parseInt(String(count), 10) || 0;
+        }
+      }
+
+      console.log("✅ Topic counts updated");
+    } else {
+      console.warn("⚠️  Could not fetch topic counts, using 0");
+    }
 
     return {
       categories,
