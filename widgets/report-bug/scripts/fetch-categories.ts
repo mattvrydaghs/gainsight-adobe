@@ -207,37 +207,67 @@ async function fetchCategoriesWithIdeas(envVars: Record<string, string>): Promis
 
     const treeData = await treeResponse.json();
     const categories: Category[] = [];
+    const categoryIdeaChildrenMap: Record<string, string[]> = {}; // Map category ID to its idea-supporting children
 
     // Process category tree recursively
-    // Only include leaf categories (non-sections), not section groupings
+    // Check if a category or any of its descendants support ideas
+    const categoryOrDescendantSupportsIdeas = (cat: any): boolean => {
+      // Check if this category supports ideas
+      if (
+        cat.supportedContentTypes &&
+        Array.isArray(cat.supportedContentTypes) &&
+        cat.supportedContentTypes.includes("idea")
+      ) {
+        return true;
+      }
+
+      // Check if any children support ideas
+      if (cat.children && Array.isArray(cat.children)) {
+        return cat.children.some((child: any) => categoryOrDescendantSupportsIdeas(child));
+      }
+
+      return false;
+    };
+
+    // Collect all leaf category IDs that support ideas within a tree
+    const collectIdeaChildrenIds = (cat: any, ids: string[] = []): string[] => {
+      // If this category supports ideas, add it
+      if (
+        cat.supportedContentTypes &&
+        Array.isArray(cat.supportedContentTypes) &&
+        cat.supportedContentTypes.includes("idea")
+      ) {
+        ids.push(String(cat.id));
+      }
+
+      // Recurse into children
+      if (cat.children && Array.isArray(cat.children)) {
+        for (const child of cat.children) {
+          collectIdeaChildrenIds(child, ids);
+        }
+      }
+
+      return ids;
+    };
+
     const processCategories = (categories_list: any[]): void => {
       if (!categories_list || !Array.isArray(categories_list)) {
         return;
       }
 
       for (const cat of categories_list) {
-        // Check if ideas are supported in this category
-        // supportedContentTypes is an undocumented field that contains available content types
-        const supportsIdeas =
-          cat.supportedContentTypes &&
-          Array.isArray(cat.supportedContentTypes) &&
-          cat.supportedContentTypes.includes("idea");
+        // Only include root categories that have idea support somewhere in their tree
+        if (categoryOrDescendantSupportsIdeas(cat)) {
+          const ideaChildrenIds = collectIdeaChildrenIds(cat);
+          categoryIdeaChildrenMap[cat.id] = ideaChildrenIds;
 
-        // Only add non-section categories (or sections with idea support and no children)
-        // Sections are groupings; we want the actual categories that can hold topics
-        if (supportsIdeas && !cat.isSection) {
           categories.push({
             id: cat.id,
             name: cat.title || cat.name,
             description: cat.description,
             image: cat.thumbnailImage || cat.heroImage || cat.image?.url || cat.thumbnail,
-            topicsCount: 0, // Will be populated from getVisibleTopicsCount endpoint
+            topicsCount: 0, // Will be populated by summing children's counts
           });
-        }
-
-        // Process nested categories (children)
-        if (cat.children && Array.isArray(cat.children)) {
-          processCategories(cat.children);
         }
       }
     };
@@ -262,12 +292,15 @@ async function fetchCategoriesWithIdeas(envVars: Record<string, string>): Promis
       const countsData = await countsResponse.json();
       const topicsCountMap = countsData.result || {};
 
-      // Update categories with the actual topic counts
+      // Update categories with the sum of all idea-supporting children's counts
       for (const category of categories) {
-        const count = topicsCountMap[category.id];
-        if (count !== undefined) {
-          category.topicsCount = parseInt(String(count), 10) || 0;
-        }
+        const ideaChildrenIds = categoryIdeaChildrenMap[category.id] || [];
+        const totalCount = ideaChildrenIds.reduce((sum, childId: string) => {
+          const count = parseInt(String(topicsCountMap[childId]), 10) || 0;
+          return sum + count;
+        }, 0);
+
+        category.topicsCount = totalCount;
       }
 
       console.log("✅ Topic counts updated");

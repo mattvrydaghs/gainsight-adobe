@@ -1,6 +1,6 @@
 /**
  * Auto-generated file - do not edit manually
- * Generated: 2026-05-01T16:18:18.469Z
+ * Generated: 2026-05-01T18:12:47.943Z
  * 
  * This file contains category data fetched at build time.
  * To regenerate, run: npm run fetch-categories
@@ -22,585 +22,574 @@ export interface CategoriesData {
 export const categoriesData: CategoriesData = {
   "categories": [
     {
-      "id": 813,
-      "name": "アイデア",
-      "description": "機能リクエストはこちらから",
-      "image": "4ec92dd0-fdc8-45e2-8311-523616700888_thumb.png",
+      "id": 809,
+      "name": "Premiere (Beta) フォーラム",
+      "description": "Premiere (Beta) フォーラム",
+      "image": "5165a296-4acd-483e-b7bc-606e11d0a2dc_thumb.png",
       "topicsCount": 6
     },
     {
-      "id": 819,
-      "name": "アイデア",
-      "description": "機能リクエストはこちらから",
-      "image": "5bdee44b-ceca-489a-b1cb-d6ed2ff78ed6_thumb.png",
+      "id": 815,
+      "name": "Substance 3D フォーラム",
+      "description": "Substance 3D フォーラム",
+      "image": "1ecee40c-8473-479b-a020-cca84c9048ec_thumb.png",
       "topicsCount": 0
     },
     {
-      "id": 83,
-      "name": "Feature Requests",
-      "description": "Feature Requests",
-      "image": "b1d72868-613a-4539-ba03-e1c687a0b4c3_thumb.png",
+      "id": 76,
+      "name": "Adobe Aero",
+      "description": "Connect, learn, and get help from the Aero Community.",
+      "image": "4fbebe0e-f037-4946-9a02-f440a0a284fb_thumb.png",
       "topicsCount": 130
     },
     {
-      "id": 33,
-      "name": "Feature Requests",
-      "description": "Feature Requests",
-      "image": "f578627a-4ead-44de-8a48-78c6ceba9c45_thumb.png",
+      "id": 29,
+      "name": "Stock",
+      "description": "Connect with creators in the official Stock community.",
+      "image": "9185faa3-3726-4a26-9918-2bb6fd4781ef_thumb.png",
       "topicsCount": 89
     },
     {
-      "id": 43,
-      "name": "Feature Requests",
-      "description": "Feature Requests",
-      "image": "26004acf-97b8-49b3-b151-882567301523_thumb.png",
+      "id": 39,
+      "name": "Substance 3D Assets and Community Assets",
+      "description": "Connect with other Substance 3D Assets users.",
+      "image": "216d6283-2dd7-46d3-948e-7f854bb57c28_thumb.png",
       "topicsCount": 12
     },
     {
-      "id": 145,
-      "name": "アイデア",
-      "description": "アイデア",
-      "image": "397cb848-83a4-43ed-bb4a-32d970497a15_thumb.png",
+      "id": 142,
+      "name": "Japan Back Room",
+      "description": "Japan Back Room",
+      "image": "0a60dd25-f2d4-452f-9018-d87c08585dc2_thumb.png",
       "topicsCount": 4
     },
     {
-      "id": 51,
-      "name": "Feature Requests",
-      "description": "Feature Requests",
-      "image": "61088e68-b5b8-4fcd-a2f1-a3aefa225f48_thumb.png",
+      "id": 47,
+      "name": "Substance 3D Designer",
+      "description": "A community for Substance 3D Designer users.",
+      "image": "c75518c5-46a3-405a-a5b1-b8aa902d5125_thumb.png",
       "topicsCount": 155
     },
     {
-      "id": 151,
-      "name": "アイデア",
-      "description": "アイデア",
-      "image": "d650cb44-737c-4c80-a44f-a52ad0b65948_thumb.png",
+      "id": 147,
+      "name": "Bridgeフォーラム",
+      "description": "Bridgeコミュニティに質問してみよう！質問への回答、ディスカッションを通して、エクスパートから色々なナレッジを学ぶことができます。知りたい人と知ってる人が繋がって会話できる、アドビのコミュニティプラットフォームです。",
+      "image": "24234581-08d4-4437-b2b8-844e27cdfbf5_thumb.png",
       "topicsCount": 1
     },
     {
-      "id": 55,
-      "name": "Feature Requests",
-      "description": "Feature Requests",
-      "image": "d92a5a6a-1380-4dc9-a832-7889fc777b53_thumb.png",
+      "id": 52,
+      "name": "Substance 3D Modeler",
+      "description": "A community for Substance 3D Modeler users.",
+      "image": "5e0d9b3b-ac40-471a-b1d8-8e6bdde3a22d_thumb.png",
       "topicsCount": 0
     },
     {
-      "id": 60,
-      "name": "Feature Requests",
-      "description": "Feature Requests",
-      "image": "adc037c1-fed1-4c36-bc96-20554e61fc35_thumb.png",
+      "id": 56,
+      "name": "Substance 3D Painter",
+      "description": "Connect, learn, and get help texturing your 3D assets.",
+      "image": "914dd940-1aa6-4bbe-aa93-5111cd962bd3_thumb.png",
       "topicsCount": 323
     },
     {
-      "id": 65,
-      "name": "Feature Requests",
-      "description": "Feature Requests",
-      "image": "5d3d0b51-e1ff-424d-8266-6f714b5390f9_thumb.png",
+      "id": 61,
+      "name": "Substance 3D Plugins",
+      "description": "A community for Substance 3D Plugins users.",
+      "image": "092562d0-eef9-4dfe-ac8d-2d1a85ea1ef3_thumb.png",
       "topicsCount": 3
     },
     {
-      "id": 70,
-      "name": "Feature Requests",
-      "description": "Feature Requests",
-      "image": "62a718f3-383a-46d6-90cf-4abb491f6cc8_thumb.png",
+      "id": 66,
+      "name": "Substance 3D Sampler",
+      "description": "A community for Substance 3D Sampler users.",
+      "image": "c9257d39-8fb9-4fb4-8429-8d8666eeec89_thumb.png",
       "topicsCount": 38
     },
     {
-      "id": 75,
-      "name": "Feature Requests",
-      "description": "Feature Requests",
-      "image": "b87eda64-eeee-4f11-bdc1-11656c8577a3_thumb.png",
+      "id": 71,
+      "name": "Substance 3D Stager",
+      "description": "A community for Substance 3D Stager users.",
+      "image": "3021e238-277b-40b9-943b-5ae3fb7d1a50_thumb.png",
       "topicsCount": 68
     },
     {
-      "id": 88,
-      "name": "Feature Requests",
-      "description": "Feature Requests",
-      "image": "8932aadf-cce6-420f-b5e0-a8271b0e66a9_thumb.png",
+      "id": 84,
+      "name": "Testing Feedback",
+      "description": "Testing Feedback",
+      "image": "c247d280-5311-4aaa-b70d-c8004b99e6c5_thumb.png",
       "topicsCount": 156
     },
     {
-      "id": 179,
-      "name": "アイデア",
-      "description": "アイデア",
-      "image": "4a977a83-3698-411d-8402-f6a4f1bb4dbb_thumb.png",
+      "id": 175,
+      "name": "アドビサポートコミュニティ 総合案内",
+      "description": "アドビサポートコミュニティ全般についてのご案内",
+      "image": "fd4e530e-374c-4f34-a401-9bdeed7da04c_thumb.png",
       "topicsCount": 1
     },
     {
-      "id": 99,
-      "name": "Feature Requests",
-      "description": "Feature Requests",
-      "image": "866f71b0-7b53-4de3-975c-d6821c114d7d_thumb.png",
+      "id": 95,
+      "name": "Using the Community",
+      "description": "Get the most out of your Adobe community experience.",
+      "image": "d2d2c91d-e52e-417b-ba70-d5293af3151c_thumb.png",
       "topicsCount": 52
     },
     {
-      "id": 159,
-      "name": "Feature Requests",
-      "description": "Feature Requests",
-      "image": "ceb1a5c9-8816-422f-8120-422cf2dc833e_thumb.png",
+      "id": 152,
+      "name": "Adobe Collaboration Experiences",
+      "description": "Adobe Collaboration Experiences",
+      "image": "37e90ea5-c775-4245-aeef-86ab4d263e5e_thumb.png",
       "topicsCount": 553
     },
     {
-      "id": 229,
-      "name": "Feature Requests",
-      "description": "Feature Requests",
-      "image": "b965d272-703f-4b0b-a0a1-b517dba1c272_thumb.png",
+      "id": 222,
+      "name": "Adobe Content Authenticity",
+      "description": "Adobe Content Authenticity",
+      "image": "fbe34ebf-dd2e-45bb-9915-04468e8e50bb_thumb.png",
       "topicsCount": 4
     },
     {
-      "id": 767,
-      "name": "Featured Content",
-      "description": "Community specific content related to using products and features",
+      "id": 326,
+      "name": "Adobe Express",
+      "description": "Join our global community to connect, learn, and get help.",
+      "image": "8c764fe5-9b32-47e6-a6fd-01bbadd4ca33_thumb.png",
       "topicsCount": 2
     },
     {
-      "id": 366,
-      "name": "Feature Requests",
-      "description": "Feature Requests",
-      "image": "e8fae20b-9663-408b-a20a-0acd4d85f58b_thumb.png",
+      "id": 357,
+      "name": "Adobe Express Developers",
+      "description": "Adobe Express Developers",
+      "image": "1bca58c0-32f0-4c79-9294-860192b54513_thumb.png",
       "topicsCount": 8
     },
     {
-      "id": 405,
-      "name": "Feature Requests",
-      "description": "Feature Requests",
-      "image": "96739480-0e6c-4999-9ed5-bfdd24e586c9_thumb.png",
-      "topicsCount": 2743
+      "id": 396,
+      "name": "Adobe Firefly",
+      "description": "Adobe Firefly",
+      "image": "cbd61580-6a24-4ef2-8798-a41984972fb6_thumb.png",
+      "topicsCount": 2742
     },
     {
-      "id": 491,
-      "name": "Feature Requests",
-      "description": "Feature Requests",
-      "image": "9c76b036-c600-4581-9b27-e6c775b50d1a_thumb.png",
+      "id": 488,
+      "name": "Premiere Mobile",
+      "description": "Premiere Mobile.",
+      "image": "a4b6a191-2237-4155-8a14-862f3d12a7e0_thumb.png",
       "topicsCount": 45
     },
     {
-      "id": 496,
-      "name": "Feature Requests",
-      "description": "Feature Requests",
-      "image": "9d24aac2-005e-4823-9cec-f4366fe8b464_thumb.png",
+      "id": 493,
+      "name": "Substance 3D Reviewer",
+      "description": "Substance 3D Reviewer",
+      "image": "820aed9e-6e5e-4584-a78c-4378b17ebc5d_thumb.png",
       "topicsCount": 1
     },
     {
-      "id": 501,
-      "name": "Feature Requests",
-      "description": "Feature Requests",
-      "image": "ea58f58f-7016-4534-a4e1-79b1ddd588db_thumb.png",
+      "id": 498,
+      "name": "Bridge UV",
+      "description": "Bridge UV",
+      "image": "4aa5b10f-a86d-455f-91b0-82747ffa2f64_thumb.png",
       "topicsCount": 0
     },
     {
-      "id": 507,
-      "name": "Feature Requests",
-      "description": "Feature Requests",
-      "image": "29f8d051-a90c-476e-8803-7f3a00fa354b_thumb.png",
+      "id": 503,
+      "name": "Adobe Media Encoder",
+      "description": "Master the art of compression, share and learn.",
+      "image": "4b00c4ee-03be-4fe0-baee-406dc674adf6_thumb.png",
       "topicsCount": 230
     },
     {
-      "id": 808,
-      "name": "Feature Requests",
-      "description": "Feature Requests",
-      "image": "ed85828d-104c-4e97-b7d2-4d7a63a3a758_thumb.jpg",
+      "id": 512,
+      "name": "Adobe Podcast",
+      "description": "Adobe Podcast",
+      "image": "bb11b7e1-592d-4593-98be-1dbaff135beb_thumb.png",
       "topicsCount": 4
     },
     {
-      "id": 522,
-      "name": "Feature Requests",
-      "description": "Feature Requests",
-      "image": "196e2899-9231-4987-9a9e-937420261d84_thumb.png",
+      "id": 518,
+      "name": "Adobe Substance 3D Viewer (Beta)",
+      "description": "Adobe Substance 3D Viewer (Beta)",
+      "image": "4ff6d513-86f2-41de-9105-324a988b51c4_thumb.png",
       "topicsCount": 17
     },
     {
-      "id": 272,
-      "name": "アイデア",
-      "description": "アイデア",
-      "image": "e97c33f6-d291-4c72-980a-680b0056074e_thumb.png",
-      "topicsCount": 25
+      "id": 268,
+      "name": "Photoshop (Beta) フォーラム",
+      "description": "Photoshop (Beta) フォーラム",
+      "image": "6630032a-f70f-4fe5-96e0-6d495f6d1f07_thumb.png",
+      "topicsCount": 26
     },
     {
-      "id": 530,
-      "name": "Feature Requests",
-      "description": "Feature Requests",
-      "image": "deff2b5b-70fc-4050-9814-f2d9646afea0_thumb.png",
+      "id": 526,
+      "name": "After Effects",
+      "description": "Get help and share feedback in our global community.",
+      "image": "bdc67e71-8aa6-43a1-9f09-632836f2709f_thumb.png",
       "topicsCount": 1404
     },
     {
-      "id": 545,
-      "name": "Feature Requests",
-      "description": "Feature Requests",
-      "image": "3374c4c0-332f-4963-bdc8-9587b94f4649_thumb.png",
+      "id": 541,
+      "name": "Audition",
+      "description": "Join the conversation on all things Adobe Audition.",
+      "image": "9586b21e-8581-468a-9c02-0cd1d7a4cbbf_thumb.png",
       "topicsCount": 335
     },
     {
-      "id": 554,
-      "name": "Feature Requests",
-      "description": "Feature Requests",
-      "image": "90cdf96a-f180-4c65-a911-259c8c14badc_thumb.png",
+      "id": 550,
+      "name": "Back Room",
+      "description": "Moderation and feedback from our Community Experts.",
+      "image": "a539cf07-baeb-46aa-9b29-006a973e7ab5_thumb.png",
       "topicsCount": 93
     },
     {
-      "id": 559,
-      "name": "Feature Requests",
-      "description": "Feature Requests",
-      "image": "4c4411f8-7e38-427f-adf0-5734a5164b55_thumb.png",
+      "id": 555,
+      "name": "Bridge",
+      "description": "Connect with our global Bridge Community.",
+      "image": "d59749ee-1307-48ef-8fe5-4ca3ad9312f4_thumb.png",
       "topicsCount": 466
     },
     {
-      "id": 564,
-      "name": "Feature Requests",
-      "description": "Feature Requests",
-      "image": "4f05b84e-8df5-45aa-be03-c32767e6fc32_thumb.png",
+      "id": 560,
+      "name": "Camera Raw",
+      "description": "Connect with our global Camera Raw Community.",
+      "image": "289afd99-bfca-41e0-92e1-2d848749a8b4_thumb.png",
       "topicsCount": 225
     },
     {
-      "id": 572,
-      "name": "Feature Requests",
-      "description": "Feature Requests",
-      "image": "fc7af1cf-77fc-42e9-8c63-0ed98f8940cf_thumb.png",
+      "id": 568,
+      "name": "Character Animator",
+      "description": "Learn how to create, build, and animate 2D puppets.",
+      "image": "5c20a4ca-1a5e-4f0d-8290-b0ce351b40ec_thumb.png",
       "topicsCount": 555
     },
     {
-      "id": 597,
-      "name": "Feature Requests",
-      "description": "Feature Requests",
-      "image": "0e89d178-b8ec-4b08-8ee0-035d9521a0cb_thumb.png",
+      "id": 589,
+      "name": "Create Embed SDK (Beta)",
+      "description": "Create Embed SDK (Beta)",
+      "image": "524a35d2-b2a3-4371-a90c-08018bb8ce49_thumb.png",
       "topicsCount": 0
     },
     {
-      "id": 598,
-      "name": "Feature Requests",
-      "description": "Feature Requests",
-      "image": "d337dcb3-dab4-4aaf-ab11-cab5d90615d9_thumb.png",
+      "id": 591,
+      "name": "Adobe Express Embed SDK",
+      "description": "Connect with other Embed SDK users and share feedback.",
+      "image": "3e7da5e8-1592-48f3-b4e1-d64f4de9eac2_thumb.png",
       "topicsCount": 0
     },
     {
-      "id": 603,
-      "name": "Feature Requests",
-      "description": "Feature Requests",
-      "image": "5b9dfc8b-c26c-4903-ac78-ea77ee872822_thumb.png",
+      "id": 599,
+      "name": "Creative Cloud desktop",
+      "description": "The official community for the Creative Cloud desktop app.",
+      "image": "aeb39b01-44b7-4eed-bad7-ad8512f8c9c0_thumb.png",
       "topicsCount": 479
     },
     {
-      "id": 608,
-      "name": "Questions",
-      "description": "Questions",
-      "image": "eb9e7b7d-33ba-43d6-8a60-f2904213c391_thumb.png",
+      "id": 607,
+      "name": "Creative Cloud Spaces (private beta)",
+      "description": "Creative Cloud Spaces (private beta)",
+      "image": "43760773-fd50-473c-8560-bfa974c6868c_thumb.png",
       "topicsCount": 9
     },
     {
-      "id": 766,
-      "name": "Featured Content",
-      "description": "Community specific content related to using products and features",
+      "id": 650,
+      "name": "Illustrator",
+      "description": "Join our Illustrator community. All skill levels welcome!",
+      "image": "e257692b-f819-4fac-a67e-47f6ac526f61_thumb.png",
       "topicsCount": 9
     },
     {
-      "id": 657,
-      "name": "Feature Requests",
-      "description": "Feature Requests",
-      "image": "7ad37902-545a-4316-ab36-21606836424d_thumb.png",
+      "id": 653,
+      "name": "Illustrator (Beta)",
+      "description": "Illustrator (Beta)",
+      "image": "16c94d1e-fa3d-4a27-82be-b40df1b707bc_thumb.png",
       "topicsCount": 53
     },
     {
-      "id": 665,
-      "name": "Feature Requests",
-      "description": "Feature Requests",
-      "image": "314427b4-5fc0-4e2a-abbf-e455ec569a61_thumb.png",
+      "id": 661,
+      "name": "Illustrator on the web (beta)",
+      "description": "Illustrator on the web (beta)",
+      "image": "5e22d3c2-2ffd-4253-8e27-902ba4820b79_thumb.png",
       "topicsCount": 67
     },
     {
-      "id": 676,
-      "name": "Feature Requests",
-      "description": "Feature Requests",
-      "image": "14c1b1b6-bd4d-4eae-a4b2-0408caa0d596_thumb.png",
+      "id": 672,
+      "name": "Lightroom Classic",
+      "description": "Connect with fellow editors in our Lr Classic community.",
+      "image": "746c3850-455f-4319-9a69-06906b47956f_thumb.png",
       "topicsCount": 1677
     },
     {
-      "id": 681,
-      "name": "Feature Requests",
-      "description": "Feature Requests",
-      "image": "2fec09da-de5b-441d-87f9-732d533a27a1_thumb.png",
+      "id": 677,
+      "name": "Lightroom ecosystem (Cloud-based)",
+      "description": "Get the most out of Lightroom with our community.",
+      "image": "f892ff7c-8200-4285-a2b1-d00080938616_thumb.png",
       "topicsCount": 1343
     },
     {
-      "id": 686,
-      "name": "Feature Requests",
-      "description": "Feature Requests",
-      "image": "659a2c84-5f19-4f7a-8563-ec973cff7637_thumb.png",
+      "id": 682,
+      "name": "Lightroom Mobile (Early Access)",
+      "description": "Lightroom Mobile (Early Access)",
+      "image": "5e3dab70-b8fa-407a-9510-56953ecc2b95_thumb.png",
       "topicsCount": 1
     },
     {
-      "id": 691,
-      "name": "Feature Requests",
-      "description": "Feature Requests",
-      "image": "8ea27fcf-e313-4479-b493-effaf006c2a8_thumb.png",
+      "id": 687,
+      "name": "Lightroom Web (Early Access)",
+      "description": "Lightroom Web (Early Access)",
+      "image": "0389db09-3fb6-477c-80c3-213a3b430fb7_thumb.png",
       "topicsCount": 0
     },
     {
-      "id": 713,
-      "name": "Feature Requests",
-      "description": "Feature Requests",
-      "image": "23d90191-5994-41ca-9912-8850637d7e29_thumb.png",
-      "topicsCount": 3150
+      "id": 709,
+      "name": "Photoshop ecosystem",
+      "description": "Master Photoshop with the help of our global community.",
+      "image": "63179268-2190-4e4b-a1f0-3ed3cb5ec76f_thumb.png",
+      "topicsCount": 3154
     },
     {
-      "id": 765,
-      "name": "Featured Content",
-      "description": "Community specific content related to using products and features",
-      "topicsCount": 4
-    },
-    {
-      "id": 730,
-      "name": "Feature Requests",
-      "description": "Feature Requests",
-      "image": "7b56ddd9-f085-46bc-8a0a-aed2dc3796f7_thumb.png",
+      "id": 726,
+      "name": "Adobe Premiere",
+      "description": "Adobe Premiere community: Connect, Learn, Feedback, Help.",
+      "image": "c670f908-3c95-4736-8284-564c24a6603d_thumb.png",
       "topicsCount": 3912
     },
     {
-      "id": 742,
-      "name": "Feature Requests",
-      "description": "Feature Requests",
-      "image": "6a8a426a-a850-4d16-8d5b-a369d70fc1a8_thumb.png",
+      "id": 738,
+      "name": "Project Neo (beta)",
+      "description": "Neo is a web-based platform that simplifies the creation of dimensional logos, icons and infographics, eliminating the need to make manual calculations to draw in the right perspective. Neo’s intuitive interface speeds graphic design work in a familiar workflow, making it easy for designers to bring dimension into their projects effortlessly.",
+      "image": "9706fb46-f375-4e3e-aa0d-407b19c1e857_thumb.png",
       "topicsCount": 13
     },
     {
-      "id": 747,
-      "name": "Feature Requests",
-      "description": "Feature Requests",
-      "image": "5508f134-f350-47e0-b7de-e9bbb4bd8fcb_thumb.png",
+      "id": 743,
+      "name": "Project Squirrel Web Private Beta",
+      "description": "Project Squirrel Web Private Beta",
+      "image": "c6fa298d-50a3-4c4d-bbb4-80ea8bc6123d_thumb.png",
       "topicsCount": 0
     },
     {
-      "id": 771,
-      "name": "주요 이슈",
-      "description": "계정, 결제 및 플랜의 주요 이슈와 관련된 게시판입니다.",
-      "image": "b0d8a619-2353-416e-b9cc-1d2f3a506b31_thumb.png",
+      "id": 333,
+      "name": "계정, 결제 및 플랜",
+      "description": "Adobe 계정, 결제 또는 플랜에 대해 질문이 있으신가요? 커뮤니티에 물어보세요. 저희가 도와드리겠습니다! 질문을 올리고, 토론하고, 팁을 공유해보세요.",
+      "image": "a7e940d5-4c2e-4402-970e-ed535e1a359a_thumb.png",
       "topicsCount": 4
     },
     {
-      "id": 772,
-      "name": "주요 이슈",
-      "description": "Acrobat의 주요 이슈와 관련된 게시판입니다.",
-      "image": "29b83e11-b2b4-47ac-a564-51e577a25369_thumb.png",
+      "id": 336,
+      "name": "Acrobat 게시판",
+      "description": "Adobe Acrobat 커뮤니티에 물어보세요. 저희가 도와드리겠습니다! 질문을 올리고, 토론하고, 팁을 공유해보세요.",
+      "image": "8e83e4df-7bea-4871-b8b2-200293f11f38_thumb.png",
       "topicsCount": 0
     },
     {
-      "id": 773,
-      "name": "주요 이슈",
-      "description": "Acrobat Reader의 주요 이슈와 관련된 게시판입니다.",
-      "image": "229d9029-705e-4599-b0dd-6df6d823012e_thumb.png",
+      "id": 339,
+      "name": "Acrobat Reader 게시판",
+      "description": "Adobe Acrobat Reader 커뮤니티에 물어보세요. 저희가 도와드리겠습니다! 질문을 올리고, 토론하고, 팁을 공유해보세요.",
+      "image": "e1e84141-eea4-4abe-b8be-d28f21c84b0a_thumb.png",
       "topicsCount": 0
     },
     {
-      "id": 774,
-      "name": "주요 이슈",
-      "description": "Adobe Express의 주요 이슈와 관련된 게시판입니다.",
-      "image": "e4884ddf-bc84-4605-9ecc-479af82cc8b7_thumb.png",
+      "id": 342,
+      "name": "Adobe Express 게시판",
+      "description": "Adobe Express (Korean)",
+      "image": "576283d2-6fad-4b6f-bc7a-3c681d806e1a_thumb.png",
       "topicsCount": 0
     },
     {
-      "id": 775,
-      "name": "주요 이슈",
-      "description": "Adobe Scan의 주요 이슈와 관련된 게시판입니다.",
-      "image": "29d04a40-4412-40d4-97a2-265cd87dcb50_thumb.png",
+      "id": 345,
+      "name": "Adobe Scan 게시판",
+      "description": "Adobe Scan 커뮤니티에 물어보세요. 저희가 도와드리겠습니다! 질문을 올리고, 토론하고, 팁을 공유해보세요.",
+      "image": "c5239fec-0f0d-4465-8be1-6711bd9997f5_thumb.png",
       "topicsCount": 0
     },
     {
-      "id": 770,
-      "name": "주요 이슈",
-      "description": "After Effect의 주요 이슈와 관련된 게시판입니다.",
-      "image": "b44e4471-da7a-4403-8b14-446b2c7906fb_thumb.png",
+      "id": 348,
+      "name": "After Effects 게시판",
+      "description": "Adobe After Effects 커뮤니티에 물어보세요. 저희가 도와드리겠습니다! 질문을 올리고, 토론하고, 팁을 공유해보세요.",
+      "image": "151a4ccf-585b-455f-b12b-bc3729ac6a95_thumb.png",
       "topicsCount": 2
     },
     {
-      "id": 776,
-      "name": "주요 이슈",
-      "description": "Animate의 주요 이슈와 관련된 게시판입니다.",
-      "image": "bc97a2d3-5957-4cf4-a64b-e265038f23ba_thumb.png",
+      "id": 351,
+      "name": "Animate 게시판",
+      "description": "Adobe Animate 커뮤니티에 물어보세요. 저희가 도와드리겠습니다! 질문을 올리고, 토론하고, 팁을 공유해보세요.",
+      "image": "36452f95-6b19-4bf2-bac3-843991f9dee3_thumb.png",
       "topicsCount": 0
     },
     {
-      "id": 777,
-      "name": "주요 이슈",
-      "description": "Audition의 주요 이슈와 관련된 게시판입니다.",
-      "image": "d7c6a49a-cdbc-475e-ba8c-3cd86bc97641_thumb.png",
+      "id": 354,
+      "name": "Audition 게시판",
+      "description": "Adobe Audition 커뮤니티에 물어보세요. 저희가 도와드리겠습니다! 질문을 올리고, 토론하고, 팁을 공유해보세요.",
+      "image": "57537eb6-f852-4d8b-bf41-8fa4f1cd77cf_thumb.png",
       "topicsCount": 0
     },
     {
-      "id": 778,
-      "name": "주요 이슈",
-      "description": "Bridge의 주요 이슈와 관련된 게시판입니다.",
-      "image": "8e7e9a3e-0907-402f-bc47-a36bc319161b_thumb.png",
+      "id": 358,
+      "name": "Bridge 게시판",
+      "description": "Adobe Bridge 커뮤니티에 물어보세요. 저희가 도와드리겠습니다! 질문을 올리고, 토론하고, 팁을 공유해보세요.",
+      "image": "dbe60818-605b-4007-9cfd-bee1fdddf4b5_thumb.png",
       "topicsCount": 0
     },
     {
-      "id": 361,
-      "name": "아이디어",
-      "description": "아이디어",
-      "image": "58474727-2a4b-4be9-967a-23576d776482_thumb.png",
+      "id": 367,
+      "name": "Camera Raw 게시판",
+      "description": "Adobe Camera Raw 커뮤니티에 물어보세요. 저희가 도와드리겠습니다! 질문을 올리고, 토론하고, 팁을 공유해보세요.",
+      "image": "27892e9d-b7a8-4d34-bd6b-0a762dbb545f_thumb.png",
       "topicsCount": 0
     },
     {
-      "id": 779,
-      "name": "주요 이슈",
-      "description": "Camera Raw의 주요 이슈와 관련된 게시판입니다.",
-      "image": "72d3b7df-e385-4717-8ada-d438fc856395_thumb.png",
-      "topicsCount": 0
-    },
-    {
-      "id": 780,
-      "name": "주요 이슈",
-      "description": "Creative Cloud의 주요 이슈와 관련된 게시판입니다.",
-      "image": "a209277b-b63e-418c-93ba-fbf57f637d28_thumb.png",
+      "id": 370,
+      "name": "Creative Cloud 게시판",
+      "description": "Adobe의 Creative Cloud 서비스에 대해 질문이 있으신가요? 저희가 도와드리겠습니다. 질문을 올리고, 토론하고, 팁을 공유해보세요.",
+      "image": "e0c01154-786c-4b94-bcf5-603c93898d0d_thumb.png",
       "topicsCount": 1
     },
     {
-      "id": 781,
-      "name": "주요 이슈",
-      "description": "Character Animator의 주요 이슈와 관련된 게시판입니다.",
-      "image": "ec882099-3d9a-4fab-a95f-67198ab2e688_thumb.png",
+      "id": 373,
+      "name": "Character Animator 게시판",
+      "description": "Adobe Character Animator 커뮤니티에 물어보세요. 저희가 도와드리겠습니다! 질문을 올리고, 토론하고, 팁을 공유해보세요.",
+      "image": "8d2dc6ea-9821-4dd7-8880-e69dc7d5b109_thumb.png",
       "topicsCount": 0
     },
     {
-      "id": 380,
-      "name": "아이디어",
-      "description": "아이디어",
-      "image": "c8a80859-5e84-456c-ada5-725a93061d6c_thumb.png",
+      "id": 376,
+      "name": "커뮤니티 사용 게시판",
+      "description": "어도비 커뮤니티에 대한 피드백과 질문을 공유해주세요.",
+      "image": "988fadb0-174e-4a8f-a4d7-d2e57751a416_thumb.png",
       "topicsCount": 4
     },
     {
-      "id": 782,
-      "name": "주요 이슈",
-      "description": "Dimension의 주요 이슈와 관련된 게시판입니다.",
-      "image": "ffb9cf2a-ec09-40b4-bd15-44c17c21d84e_thumb.png",
+      "id": 381,
+      "name": "Dimension 게시판",
+      "description": "Adobe Dimension 커뮤니티에 물어보세요. 저희가 도와드리겠습니다! 질문을 올리고, 토론하고, 팁을 공유해보세요.",
+      "image": "f830b460-f351-4a3a-9a26-96034d55ae54_thumb.png",
       "topicsCount": 0
     },
     {
-      "id": 783,
-      "name": "주요 이슈",
-      "description": "다운로드 및 설치의 주요 이슈와 관련된 게시판입니다.",
-      "image": "ad516994-00b1-4a6c-affa-eb53d4060649_thumb.png",
+      "id": 384,
+      "name": "다운로드 및 설치 게시판",
+      "description": "Adobe 앱 다운로드 및 설치에 대해 질문이 있으신가요? 저희가 도와드리겠습니다. 질문을 올리고, 토론하고, 팁을 공유해보세요.",
+      "image": "e8090024-4945-4066-9180-c17ba15d08c4_thumb.png",
       "topicsCount": 1
     },
     {
-      "id": 784,
-      "name": "주요 이슈",
-      "description": "Adobe Fonts의 주요 이슈와 관련된 게시판입니다.",
-      "image": "e773e4a5-8591-44ad-b7cc-b2e1cff4ccb4_thumb.png",
+      "id": 387,
+      "name": "Adobe Fonts 게시판",
+      "description": "Adobe Fonts 커뮤니티에 물어보세요. 저희가 도와드리겠습니다! 질문을 올리고, 토론하고, 팁을 공유해보세요.",
+      "image": "0b1d6464-dc55-4eaf-a48a-c8e8f9423486_thumb.png",
       "topicsCount": 0
     },
     {
-      "id": 785,
-      "name": "주요 이슈",
-      "description": "Fresco의 주요 이슈와 관련된 게시판입니다.",
-      "image": "e17d4e5c-47dd-49b3-abb9-ecd748f17e9f_thumb.png",
+      "id": 390,
+      "name": "Fresco 게시판",
+      "description": "Adobe Fresco 커뮤니티에 물어보세요. 저희가 도와드리겠습니다! 질문을 올리고, 토론하고, 팁을 공유해보세요.",
+      "image": "4ad42ea4-6878-4650-b3c2-5fc6a79f0a68_thumb.png",
       "topicsCount": 0
     },
     {
-      "id": 786,
-      "name": "주요 이슈",
-      "description": "Illustrator의 주요 이슈와 관련된 게시판입니다.",
-      "image": "3b39ab6b-458e-425d-9a79-5ade69b12a4f_thumb.png",
+      "id": 393,
+      "name": "Illustrator 게시판",
+      "description": "Adobe Illustrator 커뮤니티에 물어보세요. 저희가 도와드리겠습니다! 질문을 올리고, 토론하고, 팁을 공유해보세요.",
+      "image": "167e39ce-1d21-4a88-b9a2-8f00a9b85555_thumb.png",
       "topicsCount": 1
     },
     {
-      "id": 400,
-      "name": "아이디어",
-      "description": "아이디어",
-      "image": "9afb826a-cdfa-45d3-9a13-6f33289c60d5_thumb.png",
+      "id": 397,
+      "name": "Illustrator on the web (베타)",
+      "description": "Illustrator on the web (베타)",
+      "image": "dba14892-02ce-4e31-8868-b8a4250a0f69_thumb.png",
       "topicsCount": 0
     },
     {
-      "id": 787,
-      "name": "주요 이슈",
-      "description": "Indesign의 주요 이슈와 관련된 게시판입니다.",
-      "image": "773e66ab-45dc-44f5-a6e3-9b2669f9e216_thumb.png",
+      "id": 406,
+      "name": "InDesign 게시판",
+      "description": "Adobe InDesign 커뮤니티에 물어보세요. 저희가 도와드리겠습니다! 질문을 올리고, 토론하고, 팁을 공유해보세요.",
+      "image": "99015114-e2d2-47cc-b80d-ce0fd9cf2b85_thumb.png",
       "topicsCount": 0
     },
     {
-      "id": 788,
-      "name": "주요 이슈",
-      "description": "Lightroom의 주요 이슈와 관련된 게시판입니다.",
-      "image": "57c8d93c-e7cc-4ef4-90d1-edd0ff050e20_thumb.png",
+      "id": 409,
+      "name": "Lightroom 게시판",
+      "description": "Adobe Lightroom 커뮤니티에 물어보세요. 저희가 도와드리겠습니다! 질문을 올리고, 토론하고, 팁을 공유해보세요.",
+      "image": "920229d7-0a4f-4347-acc0-41ae24451efe_thumb.png",
       "topicsCount": 2
     },
     {
-      "id": 789,
-      "name": "주요 이슈",
-      "description": "Lightroom Classic의 주요 이슈와 관련된 게시판입니다.",
-      "image": "3c0ceaa6-681d-46e7-86a8-adfa27da0f1a_thumb.png",
+      "id": 412,
+      "name": "Lightroom Classic 게시판",
+      "description": "Adobe Lightroom Classic 커뮤니티에 물어보세요. 저희가 도와드리겠습니다! 질문을 올리고, 토론하고, 팁을 공유해보세요.",
+      "image": "e3139ed9-46fa-4156-9ad5-35260f7d2b21_thumb.png",
       "topicsCount": 1
     },
     {
-      "id": 790,
-      "name": "주요 이슈",
-      "description": "Media Encoder의 주요 이슈와 관련된 게시판입니다.",
-      "image": "d07a4802-724e-4e0c-9e56-1b2dbf124ef1_thumb.png",
+      "id": 415,
+      "name": "Media Encoder 게시판",
+      "description": "Adobe Media Encoder 커뮤니티에 물어보세요. 저희가 도와드리겠습니다! 질문을 올리고, 토론하고, 팁을 공유해보세요.",
+      "image": "1f538a3a-e738-4552-8027-fe26b830193b_thumb.png",
       "topicsCount": 1
     },
     {
-      "id": 791,
-      "name": "주요 이슈",
-      "description": "Photoshop의 주요 이슈와 관련된 게시판입니다.",
-      "image": "edd5ff86-987b-4f6d-8b86-f0f4c2b8e771_thumb.png",
+      "id": 421,
+      "name": "Photoshop 게시판",
+      "description": "Adobe Photoshop 커뮤니티에 물어보세요. 저희가 도와드리겠습니다! 질문을 올리고, 토론하고, 팁을 공유해보세요.",
+      "image": "c1cf11fe-7557-4cba-ba78-ccdea877211f_thumb.png",
       "topicsCount": 2
     },
     {
-      "id": 792,
-      "name": "주요 이슈",
-      "description": "Premiere Pro의 주요 이슈와 관련된 게시판입니다.",
-      "image": "8ca18a57-40b0-4310-836a-207911ef4aac_thumb.png",
+      "id": 430,
+      "name": "Premiere Pro 게시판",
+      "description": "Adobe Premiere Pro 커뮤니티에 물어보세요. 저희가 도와드리겠습니다! 질문을 올리고, 토론하고, 팁을 공유해보세요.",
+      "image": "969593fa-5693-4e3c-8f41-883d607b1301_thumb.png",
       "topicsCount": 2
     },
     {
-      "id": 793,
-      "name": "주요 이슈",
-      "description": "Premiere Rush의 주요 이슈와 관련된 게시판입니다.",
-      "image": "9b51d87f-dc5e-466a-9304-897c8c15c205_thumb.png",
+      "id": 434,
+      "name": "Premiere Rush 게시판",
+      "description": "Adobe Premiere Rush 커뮤니티에 물어보세요. 저희가 도와드리겠습니다! 질문을 올리고, 토론하고, 팁을 공유해보세요.",
+      "image": "de52528a-af7c-461d-b711-3889b24dad3d_thumb.png",
       "topicsCount": 0
     },
     {
-      "id": 794,
-      "name": "주요 이슈",
-      "description": "Stock의 주요 이슈와 관련된 게시판입니다.",
-      "image": "1ef5bbf9-9fd4-4545-a464-673cf43e9509_thumb.png",
+      "id": 439,
+      "name": "Stock 게시판",
+      "description": "Adobe Stock 커뮤니티에 물어보세요. 저희가 도와드리겠습니다! 질문을 올리고, 토론하고, 팁을 공유해보세요.",
+      "image": "2fe69d24-49a1-40b9-b7af-e0d90f5f2230_thumb.png",
       "topicsCount": 0
     },
     {
-      "id": 795,
-      "name": "주요 이슈",
-      "description": "Stock Contributor",
-      "image": "32f0e9ff-cf4e-40e3-aecb-c0f14cae6135_thumb.png",
+      "id": 442,
+      "name": "Stock Contributor 게시판",
+      "description": "Adobe Stock Contributor 커뮤니티에 물어보세요. 저희가 도와드리겠습니다! 질문을 올리고, 토론하고, 팁을 공유해보세요.",
+      "image": "11d214b5-ff18-4f0a-84bb-c2d950d3c990_thumb.png",
       "topicsCount": 0
     },
     {
-      "id": 796,
-      "name": "주요 이슈",
-      "description": "Adobe XD의 주요 이슈와 관련된 게시판입니다.",
-      "image": "17723202-2b72-45d3-9b40-9d41c7c4f9f4_thumb.png",
+      "id": 472,
+      "name": "Adobe XD 게시판",
+      "description": "Adobe XD 커뮤니티에 물어보세요. 저희가 도와드리겠습니다! 질문을 올리고, 토론하고, 팁을 공유해보세요.",
+      "image": "9434c2b3-ff60-4c2d-a318-6d9e823b1141_thumb.png",
       "topicsCount": 0
     },
     {
-      "id": 482,
-      "name": "아이디어",
-      "description": "아이디어",
-      "image": "d74e4c2b-8e70-4995-916a-e32adf9e875c_thumb.png",
+      "id": 478,
+      "name": "Project Spice",
+      "description": "Project Spice",
+      "image": "8b11b92c-129c-40b6-997b-cb8e4a8c5d39_thumb.png",
       "topicsCount": 0
     },
     {
-      "id": 487,
-      "name": "아이디어",
-      "description": "아이디어",
-      "image": "7d104a84-9d88-4305-aa22-17109fc42a61_thumb.png",
+      "id": 483,
+      "name": "Korea Back Room",
+      "description": "Korea Back Room",
+      "image": "07a90028-7270-4a31-a5f6-72eeb6ba3604_thumb.png",
       "topicsCount": 0
     },
     {
-      "id": 805,
-      "name": "Feature Requests",
-      "description": "Feature Requests",
-      "image": "e5f38b9a-c0a7-4678-9411-5296deaf1315_thumb.jpg",
+      "id": 801,
+      "name": "Test Community - Created for Demo Purposes Only",
+      "description": "Test Community - Created for Demo Purposes Only",
+      "image": "6bfa040b-c328-474e-8558-40b67bfc0290_thumb.jpg",
       "topicsCount": 0
     }
   ],
-  "lastUpdated": "2026-05-01T16:18:18.469Z"
+  "lastUpdated": "2026-05-01T18:12:47.942Z"
 };
 
 export const categories: Category[] = categoriesData.categories;
