@@ -42,6 +42,7 @@ export function App({ sdk }: { sdk: WidgetSDK }) {
       <div className="categories-container">
         {viewMode === "list" && (
           <CategoryList
+            showThumbnails
             sortBy="topicsCount"
             emptyMessage="No categories with ideas enabled found"
           />
@@ -49,6 +50,7 @@ export function App({ sdk }: { sdk: WidgetSDK }) {
         {viewMode === "grid" && (
           <CategoryGrid
             columns={3}
+            showThumbnails
             sortBy="name"
             emptyMessage="No categories with ideas enabled found"
           />

@@ -11186,7 +11186,7 @@ function Cm({
     q && B.image && /* @__PURE__ */ Q.jsx("div", { className: "category-thumbnail", children: /* @__PURE__ */ Q.jsx(
       "img",
       {
-        src: B.image,
+        src: "https://uploads-us-west-2.insided.com/adobedme-en/attachment/" + B.image,
         alt: B.name,
         loading: "lazy",
         onError: (yl) => {
@@ -11274,6 +11274,7 @@ function sy({ sdk: E }) {
       B === "list" && /* @__PURE__ */ Q.jsx(
         Cm,
         {
+          showThumbnails: !0,
           sortBy: "topicsCount",
           emptyMessage: "No categories with ideas enabled found"
         }
@@ -11282,6 +11283,7 @@ function sy({ sdk: E }) {
         oy,
         {
           columns: 3,
+          showThumbnails: !0,
           sortBy: "name",
           emptyMessage: "No categories with ideas enabled found"
         }

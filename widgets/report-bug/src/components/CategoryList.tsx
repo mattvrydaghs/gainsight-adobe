@@ -51,7 +51,7 @@ export function CategoryList({
             {showThumbnails && category.image && (
               <div className="category-thumbnail">
                 <img
-                  src={category.image}
+                  src={"https://uploads-us-west-2.insided.com/adobedme-en/attachment/"+category.image}
                   alt={category.name}
                   loading="lazy"
                   onError={(e) => {
