@@ -1,6 +1,6 @@
 /**
  * Auto-generated file - do not edit manually
- * Generated: 2026-05-01T18:23:37.382Z
+ * Generated: 2026-05-04T15:11:22.056Z
  * 
  * This file contains category data fetched at build time.
  * To regenerate, run: npm run fetch-categories
@@ -40,7 +40,7 @@ export const categoriesData: CategoriesData = {
       "name": "Adobe Aero",
       "description": "Connect, learn, and get help from the Aero Community.",
       "image": "4fbebe0e-f037-4946-9a02-f440a0a284fb_thumb.png",
-      "topicsCount": 130
+      "topicsCount": 131
     },
     {
       "id": 29,
@@ -166,7 +166,7 @@ export const categoriesData: CategoriesData = {
       "name": "Adobe Firefly",
       "description": "Adobe Firefly",
       "image": "cbd61580-6a24-4ef2-8798-a41984972fb6_thumb.png",
-      "topicsCount": 2742
+      "topicsCount": 2753
     },
     {
       "id": 488,
@@ -222,7 +222,7 @@ export const categoriesData: CategoriesData = {
       "name": "After Effects",
       "description": "Get help and share feedback in our global community.",
       "image": "bdc67e71-8aa6-43a1-9f09-632836f2709f_thumb.png",
-      "topicsCount": 1404
+      "topicsCount": 1405
     },
     {
       "id": 541,
@@ -313,14 +313,14 @@ export const categoriesData: CategoriesData = {
       "name": "Lightroom Classic",
       "description": "Connect with fellow editors in our Lr Classic community.",
       "image": "746c3850-455f-4319-9a69-06906b47956f_thumb.png",
-      "topicsCount": 1677
+      "topicsCount": 1680
     },
     {
       "id": 677,
       "name": "Lightroom ecosystem (Cloud-based)",
       "description": "Get the most out of Lightroom with our community.",
       "image": "f892ff7c-8200-4285-a2b1-d00080938616_thumb.png",
-      "topicsCount": 1343
+      "topicsCount": 1345
     },
     {
       "id": 682,
@@ -341,21 +341,21 @@ export const categoriesData: CategoriesData = {
       "name": "Photoshop ecosystem",
       "description": "Master Photoshop with the help of our global community.",
       "image": "63179268-2190-4e4b-a1f0-3ed3cb5ec76f_thumb.png",
-      "topicsCount": 3154
+      "topicsCount": 3159
     },
     {
       "id": 726,
       "name": "Adobe Premiere",
       "description": "Adobe Premiere community: Connect, Learn, Feedback, Help.",
       "image": "c670f908-3c95-4736-8284-564c24a6603d_thumb.png",
-      "topicsCount": 3912
+      "topicsCount": 3919
     },
     {
       "id": 738,
       "name": "Project Neo (beta)",
       "description": "Neo is a web-based platform that simplifies the creation of dimensional logos, icons and infographics, eliminating the need to make manual calculations to draw in the right perspective. Neo’s intuitive interface speeds graphic design work in a familiar workflow, making it easy for designers to bring dimension into their projects effortlessly.",
       "image": "9706fb46-f375-4e3e-aa0d-407b19c1e857_thumb.png",
-      "topicsCount": 13
+      "topicsCount": 14
     },
     {
       "id": 743,
@@ -369,7 +369,7 @@ export const categoriesData: CategoriesData = {
       "name": "계정, 결제 및 플랜",
       "description": "Adobe 계정, 결제 또는 플랜에 대해 질문이 있으신가요? 커뮤니티에 물어보세요. 저희가 도와드리겠습니다! 질문을 올리고, 토론하고, 팁을 공유해보세요.",
       "image": "a7e940d5-4c2e-4402-970e-ed535e1a359a_thumb.png",
-      "topicsCount": 4
+      "topicsCount": 5
     },
     {
       "id": 336,
@@ -589,7 +589,7 @@ export const categoriesData: CategoriesData = {
       "topicsCount": 0
     }
   ],
-  "lastUpdated": "2026-05-01T18:23:37.381Z"
+  "lastUpdated": "2026-05-04T15:11:22.055Z"
 };
 
 export const categories: Category[] = categoriesData.categories;

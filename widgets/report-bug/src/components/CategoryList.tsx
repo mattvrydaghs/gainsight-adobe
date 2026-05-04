@@ -9,6 +9,39 @@ export interface CategoryListProps {
   emptyMessage?: string;
 }
 
+export function CategoryCard({ category, showThumbnail }: { category: typeof categories[0]; showThumbnail?: boolean }) {
+  return (
+    <div key={category.id} className="category-card">
+      {showThumbnail && category.image && (
+        <div className="category-thumbnail">
+          <img
+            src={"https://uploads-us-west-2.insided.com/adobedme-en/attachment/" + category.image}
+            alt={category.name}
+            loading="lazy"
+            onError={(e) => {
+              e.currentTarget.style.display = "none";
+            }}
+          />
+        </div>
+      )}
+      <div className="category-content">
+        <h3 className="category-name">{category.name}</h3>
+        {category.description && (
+          <p className="category-description">{category.description}</p>
+        )}
+        <div className="category-meta">
+          <span className="category-topics-count">
+            {category.topicsCount}
+            <span className="topics-label">
+              {category.topicsCount === 1 ? "topic" : "topics"}
+            </span>
+          </span>
+        </div>
+      </div>
+    </div>
+  )
+};
+
 /**
  * CategoryList Component
  *
@@ -47,34 +80,7 @@ export function CategoryList({
     <div className="category-list">
       <div className="category-list-container">
         {displayedCategories.map((category) => (
-          <div key={category.id} className="category-card">
-            {showThumbnails && category.image && (
-              <div className="category-thumbnail">
-                <img
-                  src={"https://uploads-us-west-2.insided.com/adobedme-en/attachment/"+category.image}
-                  alt={category.name}
-                  loading="lazy"
-                  onError={(e) => {
-                    e.currentTarget.style.display = "none";
-                  }}
-                />
-              </div>
-            )}
-            <div className="category-content">
-              <h3 className="category-name">{category.name}</h3>
-              {category.description && (
-                <p className="category-description">{category.description}</p>
-              )}
-              <div className="category-meta">
-                <span className="category-topics-count">
-                  {category.topicsCount}
-                  <span className="topics-label">
-                    {category.topicsCount === 1 ? "topic" : "topics"}
-                  </span>
-                </span>
-              </div>
-            </div>
-          </div>
+          <CategoryCard key={category.id} category={category} showThumbnail={showThumbnails} />
         ))}
       </div>
     </div>
@@ -89,8 +95,24 @@ export function CategoryList({
  */
 export function CategoryGrid({
   columns = 3,
-  ...props
+  sortBy = "name",
+  maxItems,
+  showThumbnails = false,
+  emptyMessage = "No categories available",
 }: CategoryListProps & { columns?: number }): React.ReactElement {
+  const displayedCategories = useMemo(() => {
+    const sorted = getCategoriesSorted(sortBy);
+    return maxItems ? sorted.slice(0, maxItems) : sorted;
+  }, [sortBy, maxItems]);
+
+  if (displayedCategories.length === 0) {
+    return (
+      <div className="category-list-empty">
+        <p>{emptyMessage}</p>
+      </div>
+    );
+  }
+
   return (
     <div
       className="category-grid"
@@ -100,7 +122,9 @@ export function CategoryGrid({
         } as React.CSSProperties & { "--grid-columns": number }
       }
     >
-      <CategoryList {...props} />
+      {displayedCategories.map((category) => (
+        <CategoryCard key={category.id} category={category} showThumbnail={showThumbnails} />
+      ))}
     </div>
   );
 }
@@ -142,9 +166,8 @@ export function CategorySelector({
         {displayedCategories.map((category) => (
           <button
             key={category.id}
-            className={`category-selector-item ${
-              selectedId === category.id ? "selected" : ""
-            }`}
+            className={`category-selector-item ${selectedId === category.id ? "selected" : ""
+              }`}
             onClick={() => onSelect?.(category.id)}
             type="button"
           >
