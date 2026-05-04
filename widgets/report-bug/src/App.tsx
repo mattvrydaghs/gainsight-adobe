@@ -6,6 +6,7 @@ export function App({ sdk }: { sdk: WidgetSDK }) {
   const [props, setProps] = useState<WidgetProps>(sdk.getProps());
   const [selectedCategory, setSelectedCategory] = useState<string>();
   const [viewMode, setViewMode] = useState<"list" | "grid" | "selector">("grid");
+  const [sortBy, setSortBy] = useState<"name" | "topicsCount">("name");
 
   useEffect(() => sdk.on("propsChanged", setProps), [sdk]);
 
@@ -37,13 +38,24 @@ export function App({ sdk }: { sdk: WidgetSDK }) {
             Select
           </button>
         </div>
+        <div className="sort-selector">
+          <label htmlFor="sort-dropdown">Sort by:</label>
+          <select
+            id="sort-dropdown"
+            value={sortBy}
+            onChange={(e) => setSortBy(e.target.value as "name" | "topicsCount")}
+          >
+            <option value="name">Name</option>
+            <option value="topicsCount">Topics Count</option>
+          </select>
+        </div>
       </div>
 
       <div className="categories-container">
         {viewMode === "list" && (
           <CategoryList
             showThumbnails
-            sortBy="topicsCount"
+            sortBy={sortBy}
             emptyMessage="No categories with ideas enabled found"
           />
         )}
@@ -51,7 +63,7 @@ export function App({ sdk }: { sdk: WidgetSDK }) {
           <CategoryGrid
             columns={3}
             showThumbnails
-            sortBy="name"
+            sortBy={sortBy}
             emptyMessage="No categories with ideas enabled found"
           />
         )}
@@ -59,6 +71,7 @@ export function App({ sdk }: { sdk: WidgetSDK }) {
           <CategorySelector
             onSelect={setSelectedCategory}
             selectedId={selectedCategory}
+            sortBy={sortBy}
             emptyMessage="No categories with ideas enabled found"
           />
         )}
