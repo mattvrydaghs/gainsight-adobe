@@ -23,12 +23,21 @@ export function App({ sdk }: { sdk: WidgetSDK }) {
     const language = window.inSidedData?.language || "en";
     const languageCode = language.substring(0, 2);
     console.log("Detected language code:", languageCode);
-    // Get valid section names for the language, default to "en" if not found
-    const validSections = Object.keys(categorySectionMap?.[languageCode] || categorySectionMap?.["en"] || {});
-    console.log("Valid sections for language:", validSections);
-    // Filter categories to only those in the valid sections for this language
+    
+    // Get the section map for this language, default to "en" if not found
+    const sectionMap = categorySectionMap?.[languageCode] || categorySectionMap?.["en"] || {};
+    
+    // Collect all unique category names from all sections (ignore duplicates)
+    const validCategories = new Set<string>();
+    Object.values(sectionMap).forEach((categories: string[]) => {
+      categories.forEach(cat => validCategories.add(cat));
+    });
+    
+    console.log("Valid categories for language:", Array.from(validCategories));
+    
+    // Filter categories to only those found in the valid categories set for this language
     return allCategories.filter(category => 
-      validSections.includes(category.name)
+      validCategories.has(category.name)
     );
   }, []);
 
