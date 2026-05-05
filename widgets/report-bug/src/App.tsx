@@ -1,12 +1,37 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect, useMemo } from "react";
 import type { WidgetSDK, WidgetProps } from "./types";
 import { CategoryList, CategoryGrid, CategorySelector } from "./components/CategoryList";
+import { categories as allCategories } from "./generated/categories";
+
+declare global {
+  interface Window {
+    insidedData?: {
+      language?: string;
+    };
+    categorySectionMap?: Record<string, Record<string, string[]>>;
+  }
+}
 
 export function App({ sdk }: { sdk: WidgetSDK }) {
   const [props, setProps] = useState<WidgetProps>(sdk.getProps());
   const [selectedCategory, setSelectedCategory] = useState<string>();
   const [viewMode, setViewMode] = useState<"list" | "grid" | "selector">("grid");
   const [sortBy, setSortBy] = useState<"name" | "topicsCount">("name");
+
+  // Get language code from window and filter categories
+  const filteredCategories = useMemo(() => {
+    const language = window.insidedData?.language || "en";
+    const languageCode = language.substring(0, 2);
+    const sectionMap = window.categorySectionMap || {};
+    
+    // Get valid section names for the language, default to "en" if not found
+    const validSections = Object.keys(sectionMap[languageCode] || sectionMap["en"] || {});
+    
+    // Filter categories to only those in the valid sections for this language
+    return allCategories.filter(category => 
+      validSections.includes(category.name)
+    );
+  }, []);
 
   useEffect(() => sdk.on("propsChanged", setProps), [sdk]);
 
@@ -54,6 +79,7 @@ export function App({ sdk }: { sdk: WidgetSDK }) {
       <div className="categories-container">
         {viewMode === "list" && (
           <CategoryList
+            categories={filteredCategories}
             showThumbnails
             sortBy={sortBy}
             emptyMessage="No categories with ideas enabled found"
@@ -61,6 +87,7 @@ export function App({ sdk }: { sdk: WidgetSDK }) {
         )}
         {viewMode === "grid" && (
           <CategoryGrid
+            categories={filteredCategories}
             columns={3}
             showThumbnails
             sortBy={sortBy}
@@ -69,6 +96,7 @@ export function App({ sdk }: { sdk: WidgetSDK }) {
         )}
         {viewMode === "selector" && (
           <CategorySelector
+            categories={filteredCategories}
             onSelect={setSelectedCategory}
             selectedId={selectedCategory}
             sortBy={sortBy}

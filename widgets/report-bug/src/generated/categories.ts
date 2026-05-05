@@ -1,6 +1,6 @@
 /**
  * Auto-generated file - do not edit manually
- * Generated: 2026-05-04T15:16:08.639Z
+ * Generated: 2026-05-05T20:16:18.496Z
  * 
  * This file contains category data fetched at build time.
  * To regenerate, run: npm run fetch-categories
@@ -40,7 +40,7 @@ export const categoriesData: CategoriesData = {
       "name": "Adobe Aero",
       "description": "Connect, learn, and get help from the Aero Community.",
       "image": "4fbebe0e-f037-4946-9a02-f440a0a284fb_thumb.png",
-      "topicsCount": 131
+      "topicsCount": 132
     },
     {
       "id": 29,
@@ -89,7 +89,7 @@ export const categoriesData: CategoriesData = {
       "name": "Substance 3D Painter",
       "description": "Connect, learn, and get help texturing your 3D assets.",
       "image": "914dd940-1aa6-4bbe-aa93-5111cd962bd3_thumb.png",
-      "topicsCount": 323
+      "topicsCount": 325
     },
     {
       "id": 61,
@@ -166,7 +166,7 @@ export const categoriesData: CategoriesData = {
       "name": "Adobe Firefly",
       "description": "Adobe Firefly",
       "image": "cbd61580-6a24-4ef2-8798-a41984972fb6_thumb.png",
-      "topicsCount": 2753
+      "topicsCount": 2749
     },
     {
       "id": 488,
@@ -243,7 +243,7 @@ export const categoriesData: CategoriesData = {
       "name": "Bridge",
       "description": "Connect with our global Bridge Community.",
       "image": "d59749ee-1307-48ef-8fe5-4ca3ad9312f4_thumb.png",
-      "topicsCount": 466
+      "topicsCount": 468
     },
     {
       "id": 560,
@@ -278,7 +278,7 @@ export const categoriesData: CategoriesData = {
       "name": "Creative Cloud desktop",
       "description": "The official community for the Creative Cloud desktop app.",
       "image": "aeb39b01-44b7-4eed-bad7-ad8512f8c9c0_thumb.png",
-      "topicsCount": 479
+      "topicsCount": 480
     },
     {
       "id": 607,
@@ -292,7 +292,7 @@ export const categoriesData: CategoriesData = {
       "name": "Illustrator",
       "description": "Join our Illustrator community. All skill levels welcome!",
       "image": "e257692b-f819-4fac-a67e-47f6ac526f61_thumb.png",
-      "topicsCount": 9
+      "topicsCount": 8
     },
     {
       "id": 653,
@@ -313,7 +313,7 @@ export const categoriesData: CategoriesData = {
       "name": "Lightroom Classic",
       "description": "Connect with fellow editors in our Lr Classic community.",
       "image": "746c3850-455f-4319-9a69-06906b47956f_thumb.png",
-      "topicsCount": 1680
+      "topicsCount": 1681
     },
     {
       "id": 677,
@@ -341,14 +341,14 @@ export const categoriesData: CategoriesData = {
       "name": "Photoshop ecosystem",
       "description": "Master Photoshop with the help of our global community.",
       "image": "63179268-2190-4e4b-a1f0-3ed3cb5ec76f_thumb.png",
-      "topicsCount": 3159
+      "topicsCount": 3165
     },
     {
       "id": 726,
       "name": "Adobe Premiere",
       "description": "Adobe Premiere community: Connect, Learn, Feedback, Help.",
       "image": "c670f908-3c95-4736-8284-564c24a6603d_thumb.png",
-      "topicsCount": 3919
+      "topicsCount": 3920
     },
     {
       "id": 738,
@@ -589,7 +589,7 @@ export const categoriesData: CategoriesData = {
       "topicsCount": 0
     }
   ],
-  "lastUpdated": "2026-05-04T15:16:08.639Z"
+  "lastUpdated": "2026-05-05T20:16:18.495Z"
 };
 
 export const categories: Category[] = categoriesData.categories;

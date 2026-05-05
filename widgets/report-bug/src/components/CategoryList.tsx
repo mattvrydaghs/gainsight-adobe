@@ -7,6 +7,7 @@ export interface CategoryListProps {
   maxItems?: number;
   showThumbnails?: boolean;
   emptyMessage?: string;
+  categories?: typeof categories;
 }
 
 export function CategoryCard({ category, showThumbnail }: { category: typeof categories[0]; showThumbnail?: boolean }) {
@@ -61,12 +62,19 @@ export function CategoryList({
   maxItems,
   showThumbnails = false,
   emptyMessage = "No categories available",
+  categories: customCategories,
 }: CategoryListProps): React.ReactElement {
   // Sort and filter categories
   const displayedCategories = useMemo(() => {
-    const sorted = getCategoriesSorted(sortBy);
+    const categoriesToUse = customCategories || categories;
+    const sorted = [...categoriesToUse];
+    if (sortBy === "name") {
+      sorted.sort((a, b) => a.name.localeCompare(b.name));
+    } else if (sortBy === "topicsCount") {
+      sorted.sort((a, b) => b.topicsCount - a.topicsCount);
+    }
     return maxItems ? sorted.slice(0, maxItems) : sorted;
-  }, [sortBy, maxItems]);
+  }, [sortBy, maxItems, customCategories]);
 
   if (displayedCategories.length === 0) {
     return (
@@ -99,11 +107,18 @@ export function CategoryGrid({
   maxItems,
   showThumbnails = false,
   emptyMessage = "No categories available",
+  categories: customCategories,
 }: CategoryListProps & { columns?: number }): React.ReactElement {
   const displayedCategories = useMemo(() => {
-    const sorted = getCategoriesSorted(sortBy);
+    const categoriesToUse = customCategories || categories;
+    const sorted = [...categoriesToUse];
+    if (sortBy === "name") {
+      sorted.sort((a, b) => a.name.localeCompare(b.name));
+    } else if (sortBy === "topicsCount") {
+      sorted.sort((a, b) => b.topicsCount - a.topicsCount);
+    }
     return maxItems ? sorted.slice(0, maxItems) : sorted;
-  }, [sortBy, maxItems]);
+  }, [sortBy, maxItems, customCategories]);
 
   if (displayedCategories.length === 0) {
     return (
@@ -145,8 +160,16 @@ export function CategorySelector({
   ...props
 }: CategorySelectorProps): React.ReactElement {
   const sorted = useMemo(() => {
-    return getCategoriesSorted(props.sortBy || "name");
-  }, [props.sortBy]);
+    const categoriesToUse = props.categories || categories;
+    const sortedList = [...categoriesToUse];
+    const sortBy = props.sortBy || "name";
+    if (sortBy === "name") {
+      sortedList.sort((a, b) => a.name.localeCompare(b.name));
+    } else if (sortBy === "topicsCount") {
+      sortedList.sort((a, b) => b.topicsCount - a.topicsCount);
+    }
+    return sortedList;
+  }, [props.sortBy, props.categories]);
 
   const displayedCategories = useMemo(() => {
     return props.maxItems ? sorted.slice(0, props.maxItems) : sorted;
