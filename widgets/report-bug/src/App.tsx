@@ -5,11 +5,11 @@ import { categories as allCategories } from "./generated/categories";
 
 declare global {
   interface Window {
-    insidedData?: {
+    inSidedData?: {
       language?: string;
     };
-    categorySectionMap?: Record<string, Record<string, string[]>>;
   }
+  var categorySectionMap: Record<string, Record<string, string[]>>;
 }
 
 export function App({ sdk }: { sdk: WidgetSDK }) {
@@ -20,12 +20,11 @@ export function App({ sdk }: { sdk: WidgetSDK }) {
 
   // Get language code from window and filter categories
   const filteredCategories = useMemo(() => {
-    const language = window.insidedData?.language || "en";
+    const language = window.inSidedData?.language || "en";
     const languageCode = language.substring(0, 2);
-    const sectionMap = window.categorySectionMap || {};
     
     // Get valid section names for the language, default to "en" if not found
-    const validSections = Object.keys(sectionMap[languageCode] || sectionMap["en"] || {});
+    const validSections = Object.keys(categorySectionMap?.[languageCode] || categorySectionMap?.["en"] || {});
     
     // Filter categories to only those in the valid sections for this language
     return allCategories.filter(category => 

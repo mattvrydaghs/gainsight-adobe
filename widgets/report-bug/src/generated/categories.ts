@@ -1,6 +1,6 @@
 /**
  * Auto-generated file - do not edit manually
- * Generated: 2026-05-05T20:16:18.496Z
+ * Generated: 2026-05-05T20:34:45.416Z
  * 
  * This file contains category data fetched at build time.
  * To regenerate, run: npm run fetch-categories
@@ -341,7 +341,7 @@ export const categoriesData: CategoriesData = {
       "name": "Photoshop ecosystem",
       "description": "Master Photoshop with the help of our global community.",
       "image": "63179268-2190-4e4b-a1f0-3ed3cb5ec76f_thumb.png",
-      "topicsCount": 3165
+      "topicsCount": 3166
     },
     {
       "id": 726,
@@ -589,7 +589,7 @@ export const categoriesData: CategoriesData = {
       "topicsCount": 0
     }
   ],
-  "lastUpdated": "2026-05-05T20:16:18.495Z"
+  "lastUpdated": "2026-05-05T20:34:45.415Z"
 };
 
 export const categories: Category[] = categoriesData.categories;
