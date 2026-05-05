@@ -11186,7 +11186,7 @@ function Cm({ category: E, showThumbnail: X }) {
       E.description && /* @__PURE__ */ x.jsx("p", { className: "category-description", children: E.description }),
       /* @__PURE__ */ x.jsx("div", { className: "category-meta", children: /* @__PURE__ */ x.jsxs("span", { className: "category-topics-count", children: [
         E.topicsCount,
-        /* @__PURE__ */ x.jsx("span", { className: "topics-label", children: E.topicsCount === 1 ? "topic" : "topics" })
+        /* @__PURE__ */ x.jsx("span", { className: "topics-label", children: E.topicsCount === 1 ? "idea" : "ideas" })
       ] }) })
     ] })
   ] }, E.id);
@@ -11302,7 +11302,7 @@ function dr({ sdk: E }) {
             onChange: (Z) => C(Z.target.value),
             children: [
               /* @__PURE__ */ x.jsx("option", { value: "name", children: "Name" }),
-              /* @__PURE__ */ x.jsx("option", { value: "topicsCount", children: "Topics Count" })
+              /* @__PURE__ */ x.jsx("option", { value: "topicsCount", children: "Ideas Count" })
             ]
           }
         )

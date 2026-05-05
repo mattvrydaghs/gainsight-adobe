@@ -79,7 +79,7 @@ export function App({ sdk }: { sdk: WidgetSDK }) {
             onChange={(e) => setSortBy(e.target.value as "name" | "topicsCount")}
           >
             <option value="name">Name</option>
-            <option value="topicsCount">Topics Count</option>
+            <option value="topicsCount">Ideas Count</option>
           </select>
         </div>
       </div>

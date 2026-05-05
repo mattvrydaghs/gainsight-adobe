@@ -34,7 +34,7 @@ export function CategoryCard({ category, showThumbnail }: { category: typeof cat
           <span className="category-topics-count">
             {category.topicsCount}
             <span className="topics-label">
-              {category.topicsCount === 1 ? "topic" : "topics"}
+              {category.topicsCount === 1 ? "idea" : "ideas"}
             </span>
           </span>
         </div>
