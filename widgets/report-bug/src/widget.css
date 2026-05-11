@@ -76,7 +76,7 @@
   background: #fff;
   height: 40px;
 }
-.widget-controls .sort-selector {
+.widget-controls .sort-selector > select{
   font-size: 13px;
   color: #1d1d1d;
   background: #fff;
