@@ -1,6 +1,6 @@
 import { useState, useEffect, useMemo } from "react";
 import type { WidgetSDK, WidgetProps } from "./types";
-import { CategoryList, CategoryGrid, CategorySelector } from "./components/CategoryList";
+import { CategoryGrid } from "./components/CategoryList";
 import { categories as allCategories } from "./generated/categories";
 
 declare global {
@@ -15,8 +15,7 @@ declare global {
 export function App({ sdk }: { sdk: WidgetSDK }) {
   const [props, setProps] = useState<WidgetProps>(sdk.getProps());
   const [selectedCategory, setSelectedCategory] = useState<string>();
-  const [viewMode, setViewMode] = useState<"list" | "grid" | "selector">("grid");
-  const [sortBy, setSortBy] = useState<"name" | "topicsCount">("name");
+  const [sortBy, setSortBy] = useState<"name" | "topicsCount" | "name_reverse">("topicsCount");
 
   // Get language code from window and filter categories
   const filteredCategories = useMemo(() => {
@@ -51,66 +50,27 @@ export function App({ sdk }: { sdk: WidgetSDK }) {
       )}
       
       <div className="widget-controls">
-        <div className="view-mode-selector">
-          <button
-            className={`mode-button ${viewMode === "list" ? "active" : ""}`}
-            onClick={() => setViewMode("list")}
-          >
-            List
-          </button>
-          <button
-            className={`mode-button ${viewMode === "grid" ? "active" : ""}`}
-            onClick={() => setViewMode("grid")}
-          >
-            Grid
-          </button>
-          <button
-            className={`mode-button ${viewMode === "selector" ? "active" : ""}`}
-            onClick={() => setViewMode("selector")}
-          >
-            Select
-          </button>
-        </div>
         <div className="sort-selector">
           <label htmlFor="sort-dropdown">Sort by:</label>
           <select
             id="sort-dropdown"
             value={sortBy}
-            onChange={(e) => setSortBy(e.target.value as "name" | "topicsCount")}
+            onChange={(e) => setSortBy(e.target.value as "name" | "topicsCount" | "name_reverse")}
           >
-            <option value="name">Name</option>
             <option value="topicsCount">Ideas Count</option>
+            <option value="name">Alphabetical (A-Z)</option>
+            <option value="name_reverse">Alphabetical (Z-A)</option>
           </select>
         </div>
       </div>
 
       <div className="categories-container">
-        {viewMode === "list" && (
-          <CategoryList
-            categories={filteredCategories}
-            showThumbnails
-            sortBy={sortBy}
-            emptyMessage="No categories with ideas enabled found"
-          />
-        )}
-        {viewMode === "grid" && (
           <CategoryGrid
             categories={filteredCategories}
-            columns={3}
             showThumbnails
             sortBy={sortBy}
             emptyMessage="No categories with ideas enabled found"
           />
-        )}
-        {viewMode === "selector" && (
-          <CategorySelector
-            categories={filteredCategories}
-            onSelect={setSelectedCategory}
-            selectedId={selectedCategory}
-            sortBy={sortBy}
-            emptyMessage="No categories with ideas enabled found"
-          />
-        )}
       </div>
 
       {selectedCategory && (

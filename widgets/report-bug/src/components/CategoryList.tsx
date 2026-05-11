@@ -3,11 +3,13 @@ import { categories, getCategoriesSorted } from "../generated/categories";
 import "./CategoryList.css";
 
 export interface CategoryListProps {
-  sortBy?: "name" | "topicsCount";
+  sortBy?: "name" | "topicsCount" | "name_reverse";
   maxItems?: number;
   showThumbnails?: boolean;
   emptyMessage?: string;
   categories?: typeof categories;
+  onSelect?: (categoryId: string) => void;
+  selectedId?: string;
 }
 
 export function CategoryCard({ category, showThumbnail }: { category: typeof categories[0]; showThumbnail?: boolean }) {
@@ -57,43 +59,45 @@ export function CategoryCard({ category, showThumbnail }: { category: typeof cat
  * - Responsive grid layout
  * - Empty state handling
  */
-export function CategoryList({
-  sortBy = "name",
-  maxItems,
-  showThumbnails = false,
-  emptyMessage = "No categories available",
-  categories: customCategories,
-}: CategoryListProps): React.ReactElement {
-  // Sort and filter categories
-  const displayedCategories = useMemo(() => {
-    const categoriesToUse = customCategories || categories;
-    const sorted = [...categoriesToUse];
-    if (sortBy === "name") {
-      sorted.sort((a, b) => a.name.localeCompare(b.name));
-    } else if (sortBy === "topicsCount") {
-      sorted.sort((a, b) => b.topicsCount - a.topicsCount);
-    }
-    return maxItems ? sorted.slice(0, maxItems) : sorted;
-  }, [sortBy, maxItems, customCategories]);
+// export function CategoryList({
+//   sortBy = "name",
+//   maxItems,
+//   showThumbnails = false,
+//   emptyMessage = "No categories available",
+//   categories: customCategories,
+// }: CategoryListProps): React.ReactElement {
+//   // Sort and filter categories
+//   const displayedCategories = useMemo(() => {
+//     const categoriesToUse = customCategories || categories;
+//     const sorted = [...categoriesToUse];
+//     if (sortBy === "name") {
+//       sorted.sort((a, b) => a.name.localeCompare(b.name));
+//     } else if (sortBy === "topicsCount") {
+//       sorted.sort((a, b) => b.topicsCount - a.topicsCount);
+//     } else if (sortBy === "name_reverse") {
+//       sorted.sort((a, b) => b.name.localeCompare(a.name));
+//     }
+//     return maxItems ? sorted.slice(0, maxItems) : sorted;
+//   }, [sortBy, maxItems, customCategories]);
 
-  if (displayedCategories.length === 0) {
-    return (
-      <div className="category-list-empty">
-        <p>{emptyMessage}</p>
-      </div>
-    );
-  }
+//   if (displayedCategories.length === 0) {
+//     return (
+//       <div className="category-list-empty">
+//         <p>{emptyMessage}</p>
+//       </div>
+//     );
+//   }
 
-  return (
-    <div className="category-list">
-      <div className="category-list-container">
-        {displayedCategories.map((category) => (
-          <CategoryCard key={category.id} category={category} showThumbnail={showThumbnails} />
-        ))}
-      </div>
-    </div>
-  );
-}
+//   return (
+//     <div className="category-list">
+//       <div className="category-list-container">
+//         {displayedCategories.map((category) => (
+//           <CategoryCard key={category.id} category={category} showThumbnail={showThumbnails} />
+//         ))}
+//       </div>
+//     </div>
+//   );
+// }
 
 /**
  * CategoryGrid Component
@@ -116,6 +120,8 @@ export function CategoryGrid({
       sorted.sort((a, b) => a.name.localeCompare(b.name));
     } else if (sortBy === "topicsCount") {
       sorted.sort((a, b) => b.topicsCount - a.topicsCount);
+    } else if (sortBy === "name_reverse") {
+      sorted.sort((a, b) => b.name.localeCompare(a.name));
     }
     return maxItems ? sorted.slice(0, maxItems) : sorted;
   }, [sortBy, maxItems, customCategories]);
@@ -149,58 +155,60 @@ export function CategoryGrid({
  *
  * Interactive component that allows selecting a category
  */
-export interface CategorySelectorProps extends CategoryListProps {
-  onSelect?: (categoryId: string) => void;
-  selectedId?: string;
-}
+// export interface CategorySelectorProps extends CategoryListProps {
+//   onSelect?: (categoryId: string) => void;
+//   selectedId?: string;
+// }
 
-export function CategorySelector({
-  onSelect,
-  selectedId,
-  ...props
-}: CategorySelectorProps): React.ReactElement {
-  const sorted = useMemo(() => {
-    const categoriesToUse = props.categories || categories;
-    const sortedList = [...categoriesToUse];
-    const sortBy = props.sortBy || "name";
-    if (sortBy === "name") {
-      sortedList.sort((a, b) => a.name.localeCompare(b.name));
-    } else if (sortBy === "topicsCount") {
-      sortedList.sort((a, b) => b.topicsCount - a.topicsCount);
-    }
-    return sortedList;
-  }, [props.sortBy, props.categories]);
+// export function CategorySelector({
+//   onSelect,
+//   selectedId,
+//   ...props
+// }: CategorySelectorProps): React.ReactElement {
+//   const sorted = useMemo(() => {
+//     const categoriesToUse = props.categories || categories;
+//     const sortedList = [...categoriesToUse];
+//     const sortBy = props.sortBy || "name";
+//     if (sortBy === "name") {
+//       sortedList.sort((a, b) => a.name.localeCompare(b.name));
+//     } else if (sortBy === "topicsCount") {
+//       sortedList.sort((a, b) => b.topicsCount - a.topicsCount);
+//     } else if (sortBy === "name_reverse") {
+//       sortedList.sort((a, b) => b.name.localeCompare(a.name));
+//     }
+//     return sortedList;
+//   }, [props.sortBy, props.categories]);
 
-  const displayedCategories = useMemo(() => {
-    return props.maxItems ? sorted.slice(0, props.maxItems) : sorted;
-  }, [sorted, props.maxItems]);
+//   const displayedCategories = useMemo(() => {
+//     return props.maxItems ? sorted.slice(0, props.maxItems) : sorted;
+//   }, [sorted, props.maxItems]);
 
-  if (displayedCategories.length === 0) {
-    return (
-      <div className="category-list-empty">
-        <p>{props.emptyMessage || "No categories available"}</p>
-      </div>
-    );
-  }
+//   if (displayedCategories.length === 0) {
+//     return (
+//       <div className="category-list-empty">
+//         <p>{props.emptyMessage || "No categories available"}</p>
+//       </div>
+//     );
+//   }
 
-  return (
-    <div className="category-selector">
-      <div className="category-selector-list">
-        {displayedCategories.map((category) => (
-          <button
-            key={category.id}
-            className={`category-selector-item ${selectedId === category.id ? "selected" : ""
-              }`}
-            onClick={() => onSelect?.(category.id)}
-            type="button"
-          >
-            <div className="selector-content">
-              <span className="selector-name">{category.name}</span>
-              <span className="selector-count">{category.topicsCount}</span>
-            </div>
-          </button>
-        ))}
-      </div>
-    </div>
-  );
-}
+//   return (
+//     <div className="category-selector">
+//       <div className="category-selector-list">
+//         {displayedCategories.map((category) => (
+//           <button
+//             key={category.id}
+//             className={`category-selector-item ${selectedId === category.id ? "selected" : ""
+//               }`}
+//             onClick={() => onSelect?.(category.id)}
+//             type="button"
+//           >
+//             <div className="selector-content">
+//               <span className="selector-name">{category.name}</span>
+//               <span className="selector-count">{category.topicsCount}</span>
+//             </div>
+//           </button>
+//         ))}
+//       </div>
+//     </div>
+//   );
+// }
