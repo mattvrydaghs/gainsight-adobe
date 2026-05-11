@@ -1,6 +1,6 @@
 /**
  * Auto-generated file - do not edit manually
- * Generated: 2026-05-11T19:31:21.306Z
+ * Generated: 2026-05-11T19:38:42.602Z
  * 
  * This file contains category data fetched at build time.
  * To regenerate, run: npm run fetch-categories
@@ -40,7 +40,7 @@ export const categoriesData: CategoriesData = {
       "name": "Adobe Aero",
       "description": "Connect, learn, and get help from the Aero Community.",
       "image": "4fbebe0e-f037-4946-9a02-f440a0a284fb_thumb.png",
-      "topicsCount": 138
+      "topicsCount": 139
     },
     {
       "id": 29,
@@ -589,7 +589,7 @@ export const categoriesData: CategoriesData = {
       "topicsCount": 0
     }
   ],
-  "lastUpdated": "2026-05-11T19:31:21.305Z"
+  "lastUpdated": "2026-05-11T19:38:42.602Z"
 };
 
 export const categories: Category[] = categoriesData.categories;
