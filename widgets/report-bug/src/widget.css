@@ -140,13 +140,15 @@
 }
 
 .category-thumbnail {
+  flex-shrink: 0;
+  display: block;
+}
+.category-thumbnail > img {
   width: 32px;
   height: 32px;
   min-width: 32px;
   min-height: 32px;
   border-radius: 6px;
-  flex-shrink: 0;
-  display: block;
 }
 .category-content{
   display: flex;
