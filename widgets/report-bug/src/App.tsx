@@ -16,6 +16,7 @@ export function App({ sdk }: { sdk: WidgetSDK }) {
   const [props, setProps] = useState<WidgetProps>(sdk.getProps());
   const [selectedCategory, setSelectedCategory] = useState<string>();
   const [sortBy, setSortBy] = useState<"name" | "topicsCount" | "name_reverse">("topicsCount");
+  const [searchQuery, setSearchQuery] = useState<string>("");
 
   // Get language code from window and filter categories
   const filteredCategories = useMemo(() => {
@@ -35,10 +36,20 @@ export function App({ sdk }: { sdk: WidgetSDK }) {
     console.log("Valid categories for language:", Array.from(validCategories));
     
     // Filter categories to only those found in the valid categories set for this language
-    return allCategories.filter(category => 
+    let filtered = allCategories.filter(category => 
       validCategories.has(category.name)
     );
-  }, []);
+
+    // Apply search filter
+    if (searchQuery.trim()) {
+      const query = searchQuery.toLowerCase();
+      filtered = filtered.filter(category =>
+        category.name.toLowerCase().includes(query)
+      );
+    }
+
+    return filtered;
+  }, [searchQuery]);
 
   useEffect(() => sdk.on("propsChanged", setProps), [sdk]);
 
@@ -55,7 +66,13 @@ export function App({ sdk }: { sdk: WidgetSDK }) {
         </div>
         <div className="widget-controls">
           <div className="searchWrapper">
-            
+            <input
+              type="text"
+              placeholder="Search categories..."
+              value={searchQuery}
+              onChange={(e) => setSearchQuery(e.target.value)}
+              className="search-input"
+            />
           </div>
           <div className="sort-selector">
             <label htmlFor="sort-dropdown">Sort by:</label>

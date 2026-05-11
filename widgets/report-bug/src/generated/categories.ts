@@ -1,6 +1,6 @@
 /**
  * Auto-generated file - do not edit manually
- * Generated: 2026-05-05T20:42:53.225Z
+ * Generated: 2026-05-11T19:31:21.306Z
  * 
  * This file contains category data fetched at build time.
  * To regenerate, run: npm run fetch-categories
@@ -40,21 +40,21 @@ export const categoriesData: CategoriesData = {
       "name": "Adobe Aero",
       "description": "Connect, learn, and get help from the Aero Community.",
       "image": "4fbebe0e-f037-4946-9a02-f440a0a284fb_thumb.png",
-      "topicsCount": 132
+      "topicsCount": 138
     },
     {
       "id": 29,
       "name": "Stock",
       "description": "Connect with creators in the official Stock community.",
       "image": "9185faa3-3726-4a26-9918-2bb6fd4781ef_thumb.png",
-      "topicsCount": 89
+      "topicsCount": 90
     },
     {
       "id": 39,
       "name": "Substance 3D Assets and Community Assets",
       "description": "Connect with other Substance 3D Assets users.",
       "image": "216d6283-2dd7-46d3-948e-7f854bb57c28_thumb.png",
-      "topicsCount": 12
+      "topicsCount": 13
     },
     {
       "id": 142,
@@ -68,7 +68,7 @@ export const categoriesData: CategoriesData = {
       "name": "Substance 3D Designer",
       "description": "A community for Substance 3D Designer users.",
       "image": "c75518c5-46a3-405a-a5b1-b8aa902d5125_thumb.png",
-      "topicsCount": 155
+      "topicsCount": 156
     },
     {
       "id": 147,
@@ -89,7 +89,7 @@ export const categoriesData: CategoriesData = {
       "name": "Substance 3D Painter",
       "description": "Connect, learn, and get help texturing your 3D assets.",
       "image": "914dd940-1aa6-4bbe-aa93-5111cd962bd3_thumb.png",
-      "topicsCount": 325
+      "topicsCount": 328
     },
     {
       "id": 61,
@@ -131,7 +131,7 @@ export const categoriesData: CategoriesData = {
       "name": "Using the Community",
       "description": "Get the most out of your Adobe community experience.",
       "image": "d2d2c91d-e52e-417b-ba70-d5293af3151c_thumb.png",
-      "topicsCount": 52
+      "topicsCount": 55
     },
     {
       "id": 152,
@@ -152,7 +152,7 @@ export const categoriesData: CategoriesData = {
       "name": "Adobe Express",
       "description": "Join our global community to connect, learn, and get help.",
       "image": "8c764fe5-9b32-47e6-a6fd-01bbadd4ca33_thumb.png",
-      "topicsCount": 2
+      "topicsCount": 1
     },
     {
       "id": 357,
@@ -166,7 +166,7 @@ export const categoriesData: CategoriesData = {
       "name": "Adobe Firefly",
       "description": "Adobe Firefly",
       "image": "cbd61580-6a24-4ef2-8798-a41984972fb6_thumb.png",
-      "topicsCount": 2749
+      "topicsCount": 2630
     },
     {
       "id": 488,
@@ -201,14 +201,14 @@ export const categoriesData: CategoriesData = {
       "name": "Adobe Podcast",
       "description": "Adobe Podcast",
       "image": "bb11b7e1-592d-4593-98be-1dbaff135beb_thumb.png",
-      "topicsCount": 4
+      "topicsCount": 5
     },
     {
       "id": 518,
       "name": "Adobe Substance 3D Viewer (Beta)",
       "description": "Adobe Substance 3D Viewer (Beta)",
       "image": "4ff6d513-86f2-41de-9105-324a988b51c4_thumb.png",
-      "topicsCount": 17
+      "topicsCount": 18
     },
     {
       "id": 268,
@@ -222,7 +222,7 @@ export const categoriesData: CategoriesData = {
       "name": "After Effects",
       "description": "Get help and share feedback in our global community.",
       "image": "bdc67e71-8aa6-43a1-9f09-632836f2709f_thumb.png",
-      "topicsCount": 1405
+      "topicsCount": 1408
     },
     {
       "id": 541,
@@ -243,7 +243,7 @@ export const categoriesData: CategoriesData = {
       "name": "Bridge",
       "description": "Connect with our global Bridge Community.",
       "image": "d59749ee-1307-48ef-8fe5-4ca3ad9312f4_thumb.png",
-      "topicsCount": 468
+      "topicsCount": 471
     },
     {
       "id": 560,
@@ -278,7 +278,7 @@ export const categoriesData: CategoriesData = {
       "name": "Creative Cloud desktop",
       "description": "The official community for the Creative Cloud desktop app.",
       "image": "aeb39b01-44b7-4eed-bad7-ad8512f8c9c0_thumb.png",
-      "topicsCount": 480
+      "topicsCount": 482
     },
     {
       "id": 607,
@@ -292,14 +292,14 @@ export const categoriesData: CategoriesData = {
       "name": "Illustrator",
       "description": "Join our Illustrator community. All skill levels welcome!",
       "image": "e257692b-f819-4fac-a67e-47f6ac526f61_thumb.png",
-      "topicsCount": 8
+      "topicsCount": 9
     },
     {
       "id": 653,
       "name": "Illustrator (Beta)",
       "description": "Illustrator (Beta)",
       "image": "16c94d1e-fa3d-4a27-82be-b40df1b707bc_thumb.png",
-      "topicsCount": 53
+      "topicsCount": 55
     },
     {
       "id": 661,
@@ -313,14 +313,14 @@ export const categoriesData: CategoriesData = {
       "name": "Lightroom Classic",
       "description": "Connect with fellow editors in our Lr Classic community.",
       "image": "746c3850-455f-4319-9a69-06906b47956f_thumb.png",
-      "topicsCount": 1681
+      "topicsCount": 1682
     },
     {
       "id": 677,
       "name": "Lightroom ecosystem (Cloud-based)",
       "description": "Get the most out of Lightroom with our community.",
       "image": "f892ff7c-8200-4285-a2b1-d00080938616_thumb.png",
-      "topicsCount": 1345
+      "topicsCount": 1348
     },
     {
       "id": 682,
@@ -341,14 +341,14 @@ export const categoriesData: CategoriesData = {
       "name": "Photoshop ecosystem",
       "description": "Master Photoshop with the help of our global community.",
       "image": "63179268-2190-4e4b-a1f0-3ed3cb5ec76f_thumb.png",
-      "topicsCount": 3166
+      "topicsCount": 3181
     },
     {
       "id": 726,
       "name": "Adobe Premiere",
       "description": "Adobe Premiere community: Connect, Learn, Feedback, Help.",
       "image": "c670f908-3c95-4736-8284-564c24a6603d_thumb.png",
-      "topicsCount": 3920
+      "topicsCount": 3931
     },
     {
       "id": 738,
@@ -509,7 +509,7 @@ export const categoriesData: CategoriesData = {
       "name": "Lightroom 게시판",
       "description": "Adobe Lightroom 커뮤니티에 물어보세요. 저희가 도와드리겠습니다! 질문을 올리고, 토론하고, 팁을 공유해보세요.",
       "image": "920229d7-0a4f-4347-acc0-41ae24451efe_thumb.png",
-      "topicsCount": 2
+      "topicsCount": 3
     },
     {
       "id": 412,
@@ -589,7 +589,7 @@ export const categoriesData: CategoriesData = {
       "topicsCount": 0
     }
   ],
-  "lastUpdated": "2026-05-05T20:42:53.225Z"
+  "lastUpdated": "2026-05-11T19:31:21.305Z"
 };
 
 export const categories: Category[] = categoriesData.categories;
