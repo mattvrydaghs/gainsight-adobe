@@ -32,14 +32,14 @@ export function CategoryCard({ category, showThumbnail }: { category: typeof cat
         {category.description && (
           <p className="category-description">{category.description}</p>
         )}
-        <div className="category-meta">
-          <span className="category-topics-count">
-            {category.topicsCount}
-            <span className="topics-label">
-              {category.topicsCount === 1 ? "idea" : "ideas"}
-            </span>
+
+        <span className="category-topics-count">
+          {category.topicsCount}
+          <span className="topics-label">
+            {category.topicsCount === 1 ? "idea" : "ideas"}
           </span>
-        </div>
+        </span>
+        
       </div>
     </div>
   )
@@ -106,7 +106,7 @@ export function CategoryCard({ category, showThumbnail }: { category: typeof cat
  * with more prominent visual styling
  */
 export function CategoryGrid({
-  columns = 3,
+  columns = 5,
   sortBy = "name",
   maxItems,
   showThumbnails = false,
