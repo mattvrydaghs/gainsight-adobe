@@ -1,3 +1,50 @@
+.community-selector-widget {
+  font-family: "Adobe Clean", adobe-clean, "Trebuchet MS", sans-serif;
+  background-color: #f5f5f5;
+  padding: 40px;
+  display: flex;
+  flex-direction: column;
+}
+
+.widget-title {
+  margin: 0 0 20px;
+  padding-left: 32px;
+  color: #131313;
+  font-size: 28px;
+  font-weight: 800;
+  line-height: 32px;
+}
+
+.widget-content-wrapper {
+  background: #fff;
+  border-radius: 12px;
+  border: 1px dashed #d0d0d0;
+  padding: 32px;
+  width: 66.667%;
+  min-width: 400px;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+.widget-content-wrapper .widget-content-header h2 {
+  color: #000;
+  font-size: 20px;
+  font-weight: 800;
+  line-height: 130%;
+  margin: 0 0 8px;
+}
+.widget-content-wrapper .widget-content-header p {
+  color: #000 !important;
+  font-size: 16px !important;
+  font-weight: 400 !important;
+  line-height: 150% !important;
+  margin: 0 0 20px !important;
+}
+
+
+
+/* OLD STYLES BELOW */
 .react-widget-section {
   padding: 2rem;
   font-family: "Inter", system-ui, -apple-system, sans-serif;

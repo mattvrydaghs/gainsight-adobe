@@ -43,41 +43,49 @@ export function App({ sdk }: { sdk: WidgetSDK }) {
   useEffect(() => sdk.on("propsChanged", setProps), [sdk]);
 
   return (
-    <section className="react-widget-section">
-      <h3 className="react-widget-title">{props.title}</h3>
+    <section className="community-selector-widget">
+      <h1 className="widget-title">{props.title}</h1>
       {props.description && (
-        <p className="react-widget-description">{props.description}</p>
+        <p className="widget-description">{props.description}</p>
       )}
-      
-      <div className="widget-controls">
-        <div className="sort-selector">
-          <label htmlFor="sort-dropdown">Sort by:</label>
-          <select
-            id="sort-dropdown"
-            value={sortBy}
-            onChange={(e) => setSortBy(e.target.value as "name" | "topicsCount" | "name_reverse")}
-          >
-            <option value="topicsCount">Ideas Count</option>
-            <option value="name">Alphabetical (A-Z)</option>
-            <option value="name_reverse">Alphabetical (Z-A)</option>
-          </select>
+      <div className="widget-content-wrapper">
+        <div className="widget-content-header">
+          <h2 className="widget-content-title">Select a Community</h2>
+          <p>Choose the Adobe product you’d like to request a feature for. Note that feature request isn’t available in every community — if your product isn’t listed, it may not be supported here.</p>
         </div>
-      </div>
-
-      <div className="categories-container">
-          <CategoryGrid
-            categories={filteredCategories}
-            showThumbnails
-            sortBy={sortBy}
-            emptyMessage="No categories with ideas enabled found"
-          />
-      </div>
-
-      {selectedCategory && (
-        <div className="selected-category-info">
-          <p>Selected Category ID: <strong>{selectedCategory}</strong></p>
+        <div className="widget-controls">
+          <div className="searchWrapper">
+            
+          </div>
+          <div className="sort-selector">
+            <label htmlFor="sort-dropdown">Sort by:</label>
+            <select
+              id="sort-dropdown"
+              value={sortBy}
+              onChange={(e) => setSortBy(e.target.value as "name" | "topicsCount" | "name_reverse")}
+            >
+              <option value="topicsCount">Ideas Count</option>
+              <option value="name">Alphabetical (A-Z)</option>
+              <option value="name_reverse">Alphabetical (Z-A)</option>
+            </select>
+          </div>
         </div>
-      )}
+
+        <div className="categories-container">
+            <CategoryGrid
+              categories={filteredCategories}
+              showThumbnails
+              sortBy={sortBy}
+              emptyMessage="No categories with ideas enabled found"
+            />
+        </div>
+
+        {selectedCategory && (
+          <div className="selected-category-info">
+            <p>Selected Category ID: <strong>{selectedCategory}</strong></p>
+          </div>
+        )}
+      </div>
     </section>
   );
 }
