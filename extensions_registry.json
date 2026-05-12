@@ -31,7 +31,7 @@
             "options": [
               {
                 "label": "Bug",
-                "value": "bug"
+                "value": "conversation"
               },
               {
                 "label": "Feature Request",

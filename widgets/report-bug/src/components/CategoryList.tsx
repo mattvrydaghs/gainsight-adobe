@@ -70,6 +70,7 @@ export function CategoryGrid({
   categories: customCategories,
   onSelect,
   selectedId,
+  showTopicCounts,
 }: CategoryListProps): React.ReactElement {
   const displayedCategories = useMemo(() => {
     const categoriesToUse = customCategories || categories;
@@ -108,7 +109,7 @@ export function CategoryGrid({
           showThumbnail={showThumbnails}
           onSelect={onSelect}
           isSelected={selectedId === category.id}
-          showTopicCounts={true}
+          showTopicCounts={showTopicCounts}
         />
       ))}
     </div>

@@ -102,6 +102,7 @@ export function App({ sdk }: { sdk: WidgetSDK }) {
               onSelect={setSelectedCategory}
               selectedId={selectedCategory}
               columns={props.row_size}
+              showTopicCounts={props.showTopicsCount}
             />
         </div>
         <div className="widget-footer">
