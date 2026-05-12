@@ -52,5 +52,5 @@ export function roundDownTopicCount(count: number): number {
  */
 export function formatTopicCount(count: number, locale: string = 'en-US'): string {
   const roundedCount = roundDownTopicCount(count);
-  return roundedCount.toLocaleString(locale);
+  return roundedCount.toLocaleString(locale ? locale.replace("_", "-") : "en-US");
 }

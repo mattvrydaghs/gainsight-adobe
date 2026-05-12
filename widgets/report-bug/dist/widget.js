@@ -12160,7 +12160,7 @@ const c1 = {
         "conversation",
         "idea"
       ],
-      topicsCount: 65032
+      topicsCount: 65033
     },
     {
       id: 653,
@@ -12316,7 +12316,7 @@ const c1 = {
         "question",
         "idea"
       ],
-      topicsCount: 130794
+      topicsCount: 130795
     },
     {
       id: 714,
@@ -12985,7 +12985,7 @@ function o1(C) {
   return 0;
 }
 function f1(C, R = "en-US") {
-  return o1(C).toLocaleString(R);
+  return o1(C).toLocaleString(R ? R.replace("_", "-") : "en-US");
 }
 function s1({ category: C, showThumbnail: R, onSelect: G, isSelected: b, showTopicCounts: it }) {
   var st;
