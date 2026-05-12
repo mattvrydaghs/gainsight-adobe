@@ -4,6 +4,10 @@
   "description": "A widget built with React and the Widget SDK.",
   "category": "Custom",
   "imageName": "events_calendar",
+  "source": {
+    "path": "dist",
+    "entry": "index.html"
+  },
   "configuration": {
     "properties": [
       {
