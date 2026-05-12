@@ -42,9 +42,9 @@ export function App({ sdk }: { sdk: WidgetSDK }) {
     );
     console.log("Categories after language filtering:", filtered);
     // Filter by conversation_type from props if specified
-    if (props.conversation_type) {
+    if (props.conversation_type && props.conversation_type.length > 0) {
       filtered = filtered.filter(category =>
-        category.conversation_type === props.conversation_type
+        category.conversation_type.some(type => props.conversation_type!.includes(type))
       );
     }
     console.log("Categories after conversation_type filtering:", filtered);
@@ -58,7 +58,7 @@ export function App({ sdk }: { sdk: WidgetSDK }) {
     console.log("Categories after search filtering:", filtered);
 
     return filtered;
-  }, [searchQuery, props.conversation_type]);
+  }, [searchQuery, props]);
 
   useEffect(() => sdk.on("propsChanged", setProps), [sdk]);
 

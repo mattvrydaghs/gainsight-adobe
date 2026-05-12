@@ -20,7 +20,7 @@ interface Category {
   description?: string;
   image?: string | null;
   topicsCount: number;
-  conversation_type?: "idea" | "question" | "conversation";
+  conversation_type?: ('idea' | 'question' | 'conversation')[];
 }
 
 interface CategoriesData {
@@ -267,7 +267,7 @@ async function fetchCategoriesWithIdeas(envVars: Record<string, string>): Promis
             name: cat.title || cat.name,
             description: cat.description,
             image: cat.thumbnailImage || cat.heroImage || cat.image?.url || cat.thumbnail,
-            conversation_type: cat.supportedContentTypes?.includes("conversation") ? "conversation" : (cat.supportedContentTypes?.includes("question") ? "question" : "idea"),
+            conversation_type: (cat.supportedContentTypes || []).filter((type: string) => ["idea", "question", "conversation"].includes(type)),
             topicsCount: 0, // Will be populated by summing children's counts
           });
         }
@@ -332,7 +332,7 @@ function generateMockData(): CategoriesData {
         description: "Suggest new features or improvements",
         image: null,
         topicsCount: 42,
-        conversation_type: "idea",
+        conversation_type: ["idea"],
       },
       {
         id: "2",
@@ -340,7 +340,7 @@ function generateMockData(): CategoriesData {
         description: "Report issues and problems",
         image: null,
         topicsCount: 18,
-        conversation_type: "question",
+        conversation_type: ["question"],
       },
       {
         id: "3",
@@ -348,7 +348,7 @@ function generateMockData(): CategoriesData {
         description: "Share your product ideas",
         image: null,
         topicsCount: 25,
-        conversation_type: "idea",
+        conversation_type: ["idea"],
       },
     ],
     lastUpdated: new Date().toISOString(),
@@ -384,7 +384,7 @@ export interface Category {
   description?: string;
   image?: string | null;
   topicsCount: number;
-  conversation_type?: "idea" | "question" | "conversation";
+  conversation_type: ("idea" | "question" | "conversation")[];
 }
 
 export interface CategoriesData {
