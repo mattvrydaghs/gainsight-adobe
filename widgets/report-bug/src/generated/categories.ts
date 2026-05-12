@@ -1,6 +1,6 @@
 /**
  * Auto-generated file - do not edit manually
- * Generated: 2026-05-12T18:13:28.579Z
+ * Generated: 2026-05-12T18:24:58.383Z
  * 
  * This file contains category data fetched at build time.
  * To regenerate, run: npm run fetch-categories
@@ -44,7 +44,7 @@ export const categoriesData: CategoriesData = {
       "description": "Get help on your Adobe Account or purchases.",
       "image": "0354e4ad-5e10-4798-ba1f-0dec5144f6b7_thumb.png",
       "conversation_type": "question",
-      "topicsCount": 14496
+      "topicsCount": 14497
     },
     {
       "id": 798,
@@ -804,7 +804,7 @@ export const categoriesData: CategoriesData = {
       "description": "Get help and share feedback in our global community.",
       "image": "bdc67e71-8aa6-43a1-9f09-632836f2709f_thumb.png",
       "conversation_type": "conversation",
-      "topicsCount": 54799
+      "topicsCount": 54800
     },
     {
       "id": 276,
@@ -1775,7 +1775,7 @@ export const categoriesData: CategoriesData = {
       "topicsCount": 0
     }
   ],
-  "lastUpdated": "2026-05-12T18:13:28.579Z"
+  "lastUpdated": "2026-05-12T18:24:58.382Z"
 };
 
 export const categories: Category[] = categoriesData.categories;

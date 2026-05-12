@@ -40,14 +40,14 @@ export function App({ sdk }: { sdk: WidgetSDK }) {
     let filtered = allCategories.filter(category => 
       validCategories.has(category.name)
     );
-
+    console.log("Categories after language filtering:", filtered);
     // Filter by conversation_type from props if specified
     if (props.conversation_type) {
       filtered = filtered.filter(category =>
         category.conversation_type === props.conversation_type
       );
     }
-
+    console.log("Categories after conversation_type filtering:", filtered);
     // Apply search filter
     if (searchQuery.trim()) {
       const query = searchQuery.toLowerCase();
@@ -55,6 +55,7 @@ export function App({ sdk }: { sdk: WidgetSDK }) {
         category.name.toLowerCase().includes(query)
       );
     }
+    console.log("Categories after search filtering:", filtered);
 
     return filtered;
   }, [searchQuery, props.conversation_type]);
