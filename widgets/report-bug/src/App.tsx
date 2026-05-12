@@ -17,6 +17,7 @@ export function App({ sdk }: { sdk: WidgetSDK }) {
   const [selectedCategory, setSelectedCategory] = useState<string>();
   const [sortBy, setSortBy] = useState<"name" | "topicsCount" | "name_reverse">("topicsCount");
   const [searchQuery, setSearchQuery] = useState<string>("");
+  
 
   // Get language code from window and filter categories
   const filteredCategories = useMemo(() => {
@@ -55,10 +56,6 @@ export function App({ sdk }: { sdk: WidgetSDK }) {
 
   return (
     <section className="community-selector-widget">
-      <h1 className="widget-title">{props.title}</h1>
-      {props.description && (
-        <p className="widget-description">{props.description}</p>
-      )}
       <div className="widget-content-wrapper">
         <div className="widget-content-header">
           <h2 className="widget-content-title">Select a Community</h2>
@@ -96,7 +93,18 @@ export function App({ sdk }: { sdk: WidgetSDK }) {
               emptyMessage="No categories with ideas enabled found"
               onSelect={setSelectedCategory}
               selectedId={selectedCategory}
+              columns={props.row_size}
             />
+        </div>
+        <div className="widget-footer">
+          <button className="cancel" onClick={()=> {
+            if (history.length > 1) {
+              history.back();
+            } else {
+              window.location.href = "/";
+            }
+          }}>Cancel</button>
+          <button disabled={!selectedCategory} className="continue">Continue</button>
         </div>
 
         {selectedCategory && (

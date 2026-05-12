@@ -40,7 +40,7 @@ export function CategoryCard({ category, showThumbnail, onSelect, isSelected }: 
 
         <span className="category-topics-count">
           {category.topicsCount}
-          <span className="topics-label">
+          <span className="topics-label">&nbsp;
             {category.topicsCount === 1 ? "idea" : "ideas"}
           </span>
         </span>

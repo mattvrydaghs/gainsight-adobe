@@ -1,6 +1,6 @@
 /**
  * Auto-generated file - do not edit manually
- * Generated: 2026-05-12T17:04:26.368Z
+ * Generated: 2026-05-12T17:33:03.423Z
  * 
  * This file contains category data fetched at build time.
  * To regenerate, run: npm run fetch-categories
@@ -166,7 +166,7 @@ export const categoriesData: CategoriesData = {
       "name": "Adobe Firefly",
       "description": "Adobe Firefly",
       "image": "cbd61580-6a24-4ef2-8798-a41984972fb6_thumb.png",
-      "topicsCount": 2541
+      "topicsCount": 2542
     },
     {
       "id": 488,
@@ -589,7 +589,7 @@ export const categoriesData: CategoriesData = {
       "topicsCount": 0
     }
   ],
-  "lastUpdated": "2026-05-12T17:04:26.367Z"
+  "lastUpdated": "2026-05-12T17:33:03.422Z"
 };
 
 export const categories: Category[] = categoriesData.categories;

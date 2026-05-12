@@ -1,6 +1,6 @@
 export interface WidgetProps {
-  title?: string;
-  description?: string;
+  row_size?: number;
+  conversation_type?: 'bug' | 'idea' | 'question';
   [key: string]: unknown;
 }
 

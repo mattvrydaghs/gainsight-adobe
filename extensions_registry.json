@@ -13,19 +13,35 @@
       "configuration": {
         "properties": [
           {
-            "name": "title",
-            "type": "text",
-            "label": "Title",
-            "defaultValue": "Report Bug",
+            "name": "row_size",
+            "label": "Items per row",
+            "type": "number",
+            "defaultValue": 5,
             "rules": {
-              "required": true
+              "required": true,
+              "minimum": 1,
+              "maximum": 6
             }
           },
           {
-            "name": "description",
-            "type": "text",
-            "label": "Description",
-            "defaultValue": "A widget built with React and the Widget SDK."
+            "name": "conversation_type",
+            "label": "Conversation Type",
+            "type": "select",
+            "defaultValue": "idea",
+            "options": [
+              {
+                "label": "Bug",
+                "value": "bug"
+              },
+              {
+                "label": "Feature Request",
+                "value": "idea"
+              },
+              {
+                "label": "Question",
+                "value": "question"
+              }
+            ]
           }
         ]
       },
