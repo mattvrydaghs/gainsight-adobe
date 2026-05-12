@@ -12214,7 +12214,7 @@ const c1 = {
       conversation_type: [
         "question"
       ],
-      topicsCount: 76180
+      topicsCount: 76181
     },
     {
       id: 672,
@@ -13100,9 +13100,9 @@ function r1({ sdk: C }) {
     const pt = `/p/new-${m1(T.conversation_type[0])}?community=${encodeURIComponent(T.name)}`;
     window.location.href = pt;
   };
-  return /* @__PURE__ */ X.jsxs(X.Fragment, { children: [
+  return /* @__PURE__ */ X.jsx(X.Fragment, { children: /* @__PURE__ */ X.jsxs("section", { className: "community-selector-widget", children: [
     R.title && /* @__PURE__ */ X.jsx("h1", { className: "page-title", children: R.title }),
-    /* @__PURE__ */ X.jsx("section", { className: "community-selector-widget", children: /* @__PURE__ */ X.jsxs("div", { className: "widget-content-wrapper", children: [
+    /* @__PURE__ */ X.jsxs("div", { className: "widget-content-wrapper", children: [
       /* @__PURE__ */ X.jsxs("div", { className: "widget-content-header", children: [
         /* @__PURE__ */ X.jsx("h2", { className: "widget-content-title", children: R.custom_title }),
         /* @__PURE__ */ X.jsx("p", { children: R.custom_description })
@@ -13161,8 +13161,8 @@ function r1({ sdk: C }) {
         b.id,
         ")"
       ] }) })
-    ] }) })
-  ] });
+    ] })
+  ] }) });
 }
 let b1 = I0;
 const Tm = /* @__PURE__ */ new Set();
