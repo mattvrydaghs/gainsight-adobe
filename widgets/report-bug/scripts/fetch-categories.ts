@@ -20,6 +20,7 @@ interface Category {
   description?: string;
   image?: string | null;
   topicsCount: number;
+  conversation_type?: "idea" | "question" | "conversation";
 }
 
 interface CategoriesData {
@@ -207,16 +208,16 @@ async function fetchCategoriesWithIdeas(envVars: Record<string, string>): Promis
 
     const treeData = await treeResponse.json();
     const categories: Category[] = [];
-    const categoryIdeaChildrenMap: Record<string, string[]> = {}; // Map category ID to its idea-supporting children
+    const categoryIdeaChildrenMap: Record<string, string[]> = {}; // Map category ID to its idea, question, or conversation-supporting children
 
     // Process category tree recursively
-    // Check if a category or any of its descendants support ideas
+    // Check if a category or any of its descendants support ideas, questions, or conversations
     const categoryOrDescendantSupportsIdeas = (cat: any): boolean => {
-      // Check if this category supports ideas
+      // Check if this category supports ideas, questions, or conversations
       if (
         cat.supportedContentTypes &&
         Array.isArray(cat.supportedContentTypes) &&
-        cat.supportedContentTypes.includes("idea")
+        (cat.supportedContentTypes.includes("idea") || cat.supportedContentTypes.includes("question") || cat.supportedContentTypes.includes("conversation"))
       ) {
         return true;
       }
@@ -229,13 +230,13 @@ async function fetchCategoriesWithIdeas(envVars: Record<string, string>): Promis
       return false;
     };
 
-    // Collect all leaf category IDs that support ideas within a tree
+    // Collect all leaf category IDs that support ideas, questions, or conversations within a tree
     const collectIdeaChildrenIds = (cat: any, ids: string[] = []): string[] => {
-      // If this category supports ideas, add it
+      // If this category supports ideas, questions, or conversations, add it
       if (
         cat.supportedContentTypes &&
         Array.isArray(cat.supportedContentTypes) &&
-        cat.supportedContentTypes.includes("idea")
+        (cat.supportedContentTypes.includes("idea") || cat.supportedContentTypes.includes("question") || cat.supportedContentTypes.includes("conversation"))
       ) {
         ids.push(String(cat.id));
       }
@@ -256,7 +257,7 @@ async function fetchCategoriesWithIdeas(envVars: Record<string, string>): Promis
       }
 
       for (const cat of categories_list) {
-        // Only include root categories that have idea support somewhere in their tree
+        // Only include root categories that have idea, question, or conversation support somewhere in their tree
         if (categoryOrDescendantSupportsIdeas(cat)) {
           const ideaChildrenIds = collectIdeaChildrenIds(cat);
           categoryIdeaChildrenMap[cat.id] = ideaChildrenIds;
@@ -266,6 +267,7 @@ async function fetchCategoriesWithIdeas(envVars: Record<string, string>): Promis
             name: cat.title || cat.name,
             description: cat.description,
             image: cat.thumbnailImage || cat.heroImage || cat.image?.url || cat.thumbnail,
+            conversation_type: cat.supportedContentTypes?.includes("conversation") ? "conversation" : (cat.supportedContentTypes?.includes("question") ? "question" : "idea"),
             topicsCount: 0, // Will be populated by summing children's counts
           });
         }
@@ -330,6 +332,7 @@ function generateMockData(): CategoriesData {
         description: "Suggest new features or improvements",
         image: null,
         topicsCount: 42,
+        conversation_type: "idea",
       },
       {
         id: "2",
@@ -337,6 +340,7 @@ function generateMockData(): CategoriesData {
         description: "Report issues and problems",
         image: null,
         topicsCount: 18,
+        conversation_type: "question",
       },
       {
         id: "3",
@@ -344,6 +348,7 @@ function generateMockData(): CategoriesData {
         description: "Share your product ideas",
         image: null,
         topicsCount: 25,
+        conversation_type: "idea",
       },
     ],
     lastUpdated: new Date().toISOString(),
@@ -379,6 +384,7 @@ export interface Category {
   description?: string;
   image?: string | null;
   topicsCount: number;
+  conversation_type?: "idea" | "question" | "conversation";
 }
 
 export interface CategoriesData {

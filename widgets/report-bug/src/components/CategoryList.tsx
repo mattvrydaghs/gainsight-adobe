@@ -10,6 +10,7 @@ export interface CategoryListProps {
   categories?: typeof categories;
   onSelect?: (categoryId: string) => void;
   selectedId?: string;
+  columns?: number;
 }
 
 export function CategoryCard({ category, showThumbnail, onSelect, isSelected }: { category: typeof categories[0]; showThumbnail?: boolean; onSelect?: (categoryId: string) => void; isSelected?: boolean }) {
@@ -119,7 +120,7 @@ export function CategoryGrid({
   categories: customCategories,
   onSelect,
   selectedId,
-}: CategoryListProps & { columns?: number }): React.ReactElement {
+}: CategoryListProps): React.ReactElement {
   const displayedCategories = useMemo(() => {
     const categoriesToUse = customCategories || categories;
     const sorted = [...categoriesToUse];

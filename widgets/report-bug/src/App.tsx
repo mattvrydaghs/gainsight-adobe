@@ -41,6 +41,13 @@ export function App({ sdk }: { sdk: WidgetSDK }) {
       validCategories.has(category.name)
     );
 
+    // Filter by conversation_type from props if specified
+    if (props.conversation_type) {
+      filtered = filtered.filter(category =>
+        category.conversation_type === props.conversation_type
+      );
+    }
+
     // Apply search filter
     if (searchQuery.trim()) {
       const query = searchQuery.toLowerCase();
@@ -50,7 +57,7 @@ export function App({ sdk }: { sdk: WidgetSDK }) {
     }
 
     return filtered;
-  }, [searchQuery]);
+  }, [searchQuery, props.conversation_type]);
 
   useEffect(() => sdk.on("propsChanged", setProps), [sdk]);
 
@@ -59,7 +66,7 @@ export function App({ sdk }: { sdk: WidgetSDK }) {
       <div className="widget-content-wrapper">
         <div className="widget-content-header">
           <h2 className="widget-content-title">Select a Community</h2>
-          <p>Choose the Adobe product you’d like to request a feature for. Note that feature request isn’t available in every community — if your product isn’t listed, it may not be supported here.</p>
+          <p>Choose the Adobe product you’d like to request a feature for. Note that feature request isn’t available in every community — if your product isn’t listed, it may not be supported here. {props.row_size} items per row for {props.conversation_type}</p>
         </div>
         <div className="widget-controls">
           <div className="searchWrapper">
