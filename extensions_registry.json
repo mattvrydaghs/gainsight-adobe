@@ -47,14 +47,13 @@
           {
             "name": "custom_title",
             "label": "Title",
-            "type": "string",
+            "type": "text",
             "defaultValue": "Select a community"
           },
           {
             "name": "custom_description",
             "label": "Description",
-            "type": "string",
-            "required": true,
+            "type": "text",
             "defaultValue": ""
           },
           {
