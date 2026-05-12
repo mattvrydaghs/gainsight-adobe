@@ -94,7 +94,7 @@ export function App({ sdk }: { sdk: WidgetSDK }) {
 
   return (
     <>
-      {props.title && <h1>{props.title}</h1>}
+      {props.title && <h1 className="page-title">{props.title}</h1>}
       <section className="community-selector-widget">
         <div className="widget-content-wrapper">
           <div className="widget-content-header">

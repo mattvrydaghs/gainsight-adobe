@@ -1,13 +1,9 @@
 {
   "version": "1.0.0",
-  "title": "Report Bug",
+  "title": "Select Community",
   "description": "A widget built with React and the Widget SDK.",
   "category": "Custom",
-  "imageSrc": "thumbnail.png",
-  "source": {
-    "path": "dist",
-    "entry": "index.html"
-  },
+  "imageName": "events_calendar",
   "configuration": {
     "properties": [
       {
@@ -63,7 +59,11 @@
     ]
   },
   "defaultConfig": {
-    "title": "Report Bug",
-    "description": "A widget built with React and the Widget SDK."
+    "title": "",
+    "row_size": 5,
+    "conversation_type": "conversation",
+    "custom_title": "Select a community",
+    "custom_description": "Choose the Adobe product you'd like to report a bug for. Note that bug reporting isn't available in every community — if your product isn't listed, it may not be supported here.",
+    "showTopicsCount": true
   }
 }
