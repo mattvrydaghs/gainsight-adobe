@@ -94,6 +94,8 @@ export function App({ sdk }: { sdk: WidgetSDK }) {
               showThumbnails
               sortBy={sortBy}
               emptyMessage="No categories with ideas enabled found"
+              onSelect={setSelectedCategory}
+              selectedId={selectedCategory}
             />
         </div>
 

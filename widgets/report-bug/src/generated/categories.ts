@@ -1,6 +1,6 @@
 /**
  * Auto-generated file - do not edit manually
- * Generated: 2026-05-11T20:04:11.339Z
+ * Generated: 2026-05-12T17:04:26.368Z
  * 
  * This file contains category data fetched at build time.
  * To regenerate, run: npm run fetch-categories
@@ -47,7 +47,7 @@ export const categoriesData: CategoriesData = {
       "name": "Stock",
       "description": "Connect with creators in the official Stock community.",
       "image": "9185faa3-3726-4a26-9918-2bb6fd4781ef_thumb.png",
-      "topicsCount": 90
+      "topicsCount": 91
     },
     {
       "id": 39,
@@ -166,7 +166,7 @@ export const categoriesData: CategoriesData = {
       "name": "Adobe Firefly",
       "description": "Adobe Firefly",
       "image": "cbd61580-6a24-4ef2-8798-a41984972fb6_thumb.png",
-      "topicsCount": 2630
+      "topicsCount": 2541
     },
     {
       "id": 488,
@@ -250,7 +250,7 @@ export const categoriesData: CategoriesData = {
       "name": "Camera Raw",
       "description": "Connect with our global Camera Raw Community.",
       "image": "289afd99-bfca-41e0-92e1-2d848749a8b4_thumb.png",
-      "topicsCount": 225
+      "topicsCount": 226
     },
     {
       "id": 568,
@@ -320,7 +320,7 @@ export const categoriesData: CategoriesData = {
       "name": "Lightroom ecosystem (Cloud-based)",
       "description": "Get the most out of Lightroom with our community.",
       "image": "f892ff7c-8200-4285-a2b1-d00080938616_thumb.png",
-      "topicsCount": 1348
+      "topicsCount": 1349
     },
     {
       "id": 682,
@@ -341,14 +341,14 @@ export const categoriesData: CategoriesData = {
       "name": "Photoshop ecosystem",
       "description": "Master Photoshop with the help of our global community.",
       "image": "63179268-2190-4e4b-a1f0-3ed3cb5ec76f_thumb.png",
-      "topicsCount": 3181
+      "topicsCount": 3183
     },
     {
       "id": 726,
       "name": "Adobe Premiere",
       "description": "Adobe Premiere community: Connect, Learn, Feedback, Help.",
       "image": "c670f908-3c95-4736-8284-564c24a6603d_thumb.png",
-      "topicsCount": 3931
+      "topicsCount": 3932
     },
     {
       "id": 738,
@@ -589,7 +589,7 @@ export const categoriesData: CategoriesData = {
       "topicsCount": 0
     }
   ],
-  "lastUpdated": "2026-05-11T20:04:11.339Z"
+  "lastUpdated": "2026-05-12T17:04:26.367Z"
 };
 
 export const categories: Category[] = categoriesData.categories;

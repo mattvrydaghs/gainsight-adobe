@@ -12,9 +12,14 @@ export interface CategoryListProps {
   selectedId?: string;
 }
 
-export function CategoryCard({ category, showThumbnail }: { category: typeof categories[0]; showThumbnail?: boolean }) {
+export function CategoryCard({ category, showThumbnail, onSelect, isSelected }: { category: typeof categories[0]; showThumbnail?: boolean; onSelect?: (categoryId: string) => void; isSelected?: boolean }) {
   return (
-    <div key={category.id} className="category-card">
+    <button
+      key={category.id}
+      className={`category-card ${isSelected ? "selected" : ""}`}
+      onClick={() => onSelect?.(category.id)}
+      type="button"
+    >
       {showThumbnail && category.image && (
         <div className="category-thumbnail">
           <img
@@ -41,7 +46,7 @@ export function CategoryCard({ category, showThumbnail }: { category: typeof cat
         </span>
         
       </div>
-    </div>
+    </button>
   )
 };
 
@@ -112,6 +117,8 @@ export function CategoryGrid({
   showThumbnails = false,
   emptyMessage = "No categories available",
   categories: customCategories,
+  onSelect,
+  selectedId,
 }: CategoryListProps & { columns?: number }): React.ReactElement {
   const displayedCategories = useMemo(() => {
     const categoriesToUse = customCategories || categories;
@@ -136,7 +143,7 @@ export function CategoryGrid({
 
   return (
     <div
-      className="category-grid"
+      className="categories-grid"
       style={
         {
           "--grid-columns": columns,
@@ -144,7 +151,13 @@ export function CategoryGrid({
       }
     >
       {displayedCategories.map((category) => (
-        <CategoryCard key={category.id} category={category} showThumbnail={showThumbnails} />
+        <CategoryCard
+          key={category.id}
+          category={category}
+          showThumbnail={showThumbnails}
+          onSelect={onSelect}
+          isSelected={selectedId === category.id}
+        />
       ))}
     </div>
   );
