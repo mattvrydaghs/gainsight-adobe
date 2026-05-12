@@ -1,6 +1,7 @@
 export interface WidgetProps {
   row_size?: number;
   conversation_type?: ('idea' | 'question' | 'conversation')[];
+  showTopicsCount?: boolean;
   [key: string]: unknown;
 }
 

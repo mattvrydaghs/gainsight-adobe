@@ -40,6 +40,12 @@
             "value": "question"
           }
         ]
+      },
+      {
+        "name": "showTopicsCount",
+        "label": "Show Topics Count",
+        "type": "boolean",
+        "defaultValue": true
       }
     ]
   },
