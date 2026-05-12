@@ -13,6 +13,7 @@
       {
         "name": "row_size",
         "label": "Items per row",
+        "description": "Number of items to display per row (1-6)",
         "type": "number",
         "defaultValue": 5,
         "rules":{
@@ -40,6 +41,19 @@
             "value": "question"
           }
         ]
+      },
+      {
+        "name":"custom_title",
+        "label":"Title",
+        "type":"string",
+        "defaultValue":"Select a community"
+      },
+      {
+        "name": "custom_description",
+        "label": "Description",
+        "type": "string",
+        "required": true,
+        "defaultValue": ""
       },
       {
         "name": "showTopicsCount",

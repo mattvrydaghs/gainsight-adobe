@@ -1,6 +1,6 @@
 import React, { useMemo } from "react";
 import { categories, getCategoriesSorted } from "../generated/categories";
-import { roundDownTopicCount } from "../utils/formatters";
+import { formatTopicCount } from "../utils/formatters";
 import "./CategoryList.css";
 
 export interface CategoryListProps {
@@ -9,18 +9,22 @@ export interface CategoryListProps {
   showThumbnails?: boolean;
   emptyMessage?: string;
   categories?: typeof categories;
-  onSelect?: (categoryId: string) => void;
+  onSelect?: (category: { id: string; name: string }) => void;
   selectedId?: string;
   columns?: number;
   showTopicCounts?: boolean;
 }
 
-export function CategoryCard({ category, showThumbnail, onSelect, isSelected, showTopicCounts }: { category: typeof categories[0]; showThumbnail?: boolean; onSelect?: (categoryId: string) => void; isSelected?: boolean; showTopicCounts?: boolean }) {
+export function CategoryCard({ category, showThumbnail, onSelect, isSelected, showTopicCounts }: { category: typeof categories[0]; showThumbnail?: boolean; onSelect?: (category: { id: string; name: string }) => void; isSelected?: boolean; showTopicCounts?: boolean }) {
+  // Get locale from window.inSidedData or default to en-US
+  const locale = window.inSidedData?.language || 'en-US';
+  const formattedCount = formatTopicCount(category.topicsCount, locale);
+
   return (
     <button
       key={category.id}
       className={`category-card ${isSelected ? "selected" : ""}`}
-      onClick={() => onSelect?.(category.id)}
+      onClick={() => onSelect?.({ id: category.id, name: category.name })}
       type="button"
     >
       {showThumbnail && category.image && (
@@ -43,9 +47,9 @@ export function CategoryCard({ category, showThumbnail, onSelect, isSelected, sh
 
         {showTopicCounts && (
           <span className="category-topics-count">
-            {roundDownTopicCount(category.topicsCount) + "+"}
+            {formattedCount + "+"}
             <span className="topics-label">&nbsp;
-              {roundDownTopicCount(category.topicsCount) === 1 ? "topic" : "topics"}
+              {category.topicsCount === 1 ? "topic" : "topics"}
             </span>
           </span>
         )}

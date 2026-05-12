@@ -36,3 +36,21 @@ export function roundDownTopicCount(count: number): number {
 
   return 0;
 }
+
+/**
+ * Formats a topic count as a locale-specific number string
+ * Rounds down to the nearest bracket and formats with locale separators
+ * 
+ * @param count - The topic count to format
+ * @param locale - The locale string (defaults to 'en-US')
+ * @returns The formatted topic count string
+ * 
+ * @example
+ * formatTopicCount(1500) // "1,000" (en-US)
+ * formatTopicCount(1500, 'de-DE') // "1.000" (de-DE)
+ * formatTopicCount(30000) // "25,000" (en-US)
+ */
+export function formatTopicCount(count: number, locale: string = 'en-US'): string {
+  const roundedCount = roundDownTopicCount(count);
+  return roundedCount.toLocaleString(locale);
+}
