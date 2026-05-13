@@ -42,7 +42,10 @@
                 "label": "Question",
                 "value": "question"
               }
-            ]
+            ],
+            "rules": {
+              "required": true
+            }
           },
           {
             "name": "custom_title",
