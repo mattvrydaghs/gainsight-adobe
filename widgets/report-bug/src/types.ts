@@ -1,7 +1,7 @@
 export interface WidgetProps {
   title?: string;
-  row_size?: number;
-  conversation_type?: ('idea' | 'question' | 'conversation')[];
+  row_size: number;
+  conversation_type: ('idea' | 'question' | 'conversation');
   showTopicsCount?: boolean;
   custom_title?: string;
   custom_description?: string;

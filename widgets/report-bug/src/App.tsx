@@ -55,12 +55,10 @@ export function App({ sdk }: { sdk: WidgetSDK }) {
       validCategories.has(category.name)
     );
 
-    // Filter by conversation_type from props if specified
-    if (props.conversation_type && props.conversation_type.length > 0) {
-      filtered = filtered.filter(category =>
-        category.conversation_type.some(type => props.conversation_type!.includes(type))
-      );
-    }
+    // Filter by conversation_type
+    filtered = filtered.filter(category =>
+      category.conversation_type.some(type => props.conversation_type === type)
+    );
 
     // Apply search filter
     if (searchQuery.trim()) {
@@ -80,10 +78,10 @@ export function App({ sdk }: { sdk: WidgetSDK }) {
 
     // Find the selected category in allCategories to get its conversation_type
     const category = allCategories.find(cat => cat.id === selectedCategory.id);
-    if (!category || !category.conversation_type || category.conversation_type.length === 0) return;
+    if (!category) return;
 
     // Get the first conversation type and map it
-    const conversationType = mapConversationTypeToUrlType(category.conversation_type[0]);
+    const conversationType = mapConversationTypeToUrlType(props.conversation_type);
     
     // Build the redirect URL
     const redirectUrl = `/p/new-${conversationType}?community=${encodeURIComponent(category.name)}`;
@@ -147,12 +145,6 @@ export function App({ sdk }: { sdk: WidgetSDK }) {
             }}>Cancel</button>
             <button disabled={!selectedCategory} className="continue" onClick={handleContinue}>Continue</button>
           </div>
-
-          {selectedCategory && (
-            <div className="selected-category-info">
-              <p>Selected Category: <strong>{selectedCategory.name}</strong> (ID: {selectedCategory.id})</p>
-            </div>
-          )}
         </div>
       </section>
     </>

@@ -1,6 +1,6 @@
 /**
  * Auto-generated file - do not edit manually
- * Generated: 2026-05-12T20:58:49.165Z
+ * Generated: 2026-05-13T14:46:05.925Z
  * 
  * This file contains category data fetched at build time.
  * To regenerate, run: npm run fetch-categories
@@ -50,7 +50,7 @@ export const categoriesData: CategoriesData = {
       "conversation_type": [
         "question"
       ],
-      "topicsCount": 14497
+      "topicsCount": 14500
     },
     {
       "id": 798,
@@ -70,7 +70,7 @@ export const categoriesData: CategoriesData = {
       "conversation_type": [
         "question"
       ],
-      "topicsCount": 88001
+      "topicsCount": 88004
     },
     {
       "id": 809,
@@ -114,7 +114,7 @@ export const categoriesData: CategoriesData = {
       "conversation_type": [
         "question"
       ],
-      "topicsCount": 9984
+      "topicsCount": 9989
     },
     {
       "id": 109,
@@ -124,7 +124,7 @@ export const categoriesData: CategoriesData = {
       "conversation_type": [
         "question"
       ],
-      "topicsCount": 2802
+      "topicsCount": 2803
     },
     {
       "id": 16,
@@ -144,7 +144,7 @@ export const categoriesData: CategoriesData = {
       "conversation_type": [
         "question"
       ],
-      "topicsCount": 5111
+      "topicsCount": 5112
     },
     {
       "id": 116,
@@ -236,7 +236,7 @@ export const categoriesData: CategoriesData = {
         "question",
         "idea"
       ],
-      "topicsCount": 982
+      "topicsCount": 984
     },
     {
       "id": 130,
@@ -258,7 +258,7 @@ export const categoriesData: CategoriesData = {
         "question",
         "idea"
       ],
-      "topicsCount": 8354
+      "topicsCount": 8353
     },
     {
       "id": 133,
@@ -278,7 +278,7 @@ export const categoriesData: CategoriesData = {
       "conversation_type": [
         "question"
       ],
-      "topicsCount": 16706
+      "topicsCount": 16707
     },
     {
       "id": 136,
@@ -389,7 +389,7 @@ export const categoriesData: CategoriesData = {
         "question",
         "idea"
       ],
-      "topicsCount": 4020
+      "topicsCount": 4021
     },
     {
       "id": 160,
@@ -509,7 +509,7 @@ export const categoriesData: CategoriesData = {
         "conversation",
         "idea"
       ],
-      "topicsCount": 2625
+      "topicsCount": 2624
     },
     {
       "id": 89,
@@ -519,7 +519,7 @@ export const categoriesData: CategoriesData = {
       "conversation_type": [
         "question"
       ],
-      "topicsCount": 1833
+      "topicsCount": 1835
     },
     {
       "id": 180,
@@ -561,7 +561,7 @@ export const categoriesData: CategoriesData = {
         "question",
         "idea"
       ],
-      "topicsCount": 5140
+      "topicsCount": 5141
     },
     {
       "id": 186,
@@ -601,7 +601,7 @@ export const categoriesData: CategoriesData = {
       "conversation_type": [
         "question"
       ],
-      "topicsCount": 6709
+      "topicsCount": 6710
     },
     {
       "id": 103,
@@ -757,7 +757,7 @@ export const categoriesData: CategoriesData = {
         "question",
         "idea"
       ],
-      "topicsCount": 15834
+      "topicsCount": 15837
     },
     {
       "id": 219,
@@ -801,7 +801,7 @@ export const categoriesData: CategoriesData = {
         "question",
         "idea"
       ],
-      "topicsCount": 10938
+      "topicsCount": 10948
     },
     {
       "id": 230,
@@ -972,7 +972,7 @@ export const categoriesData: CategoriesData = {
         "conversation",
         "idea"
       ],
-      "topicsCount": 276
+      "topicsCount": 279
     },
     {
       "id": 260,
@@ -1058,7 +1058,7 @@ export const categoriesData: CategoriesData = {
         "question",
         "idea"
       ],
-      "topicsCount": 54803
+      "topicsCount": 54807
     },
     {
       "id": 276,
@@ -1079,7 +1079,7 @@ export const categoriesData: CategoriesData = {
         "conversation",
         "question"
       ],
-      "topicsCount": 1031
+      "topicsCount": 1032
     },
     {
       "id": 279,
@@ -1119,7 +1119,7 @@ export const categoriesData: CategoriesData = {
       "conversation_type": [
         "question"
       ],
-      "topicsCount": 69026
+      "topicsCount": 69027
     },
     {
       "id": 285,
@@ -1206,7 +1206,7 @@ export const categoriesData: CategoriesData = {
         "question",
         "idea"
       ],
-      "topicsCount": 10590
+      "topicsCount": 10591
     },
     {
       "id": 299,
@@ -1216,7 +1216,7 @@ export const categoriesData: CategoriesData = {
       "conversation_type": [
         "question"
       ],
-      "topicsCount": 10521
+      "topicsCount": 10523
     },
     {
       "id": 560,
@@ -1331,7 +1331,7 @@ export const categoriesData: CategoriesData = {
       "conversation_type": [
         "question"
       ],
-      "topicsCount": 37758
+      "topicsCount": 37759
     },
     {
       "id": 317,
@@ -1417,7 +1417,7 @@ export const categoriesData: CategoriesData = {
         "question",
         "idea"
       ],
-      "topicsCount": 2192
+      "topicsCount": 2189
     },
     {
       "id": 604,
@@ -1469,7 +1469,7 @@ export const categoriesData: CategoriesData = {
       "conversation_type": [
         "question"
       ],
-      "topicsCount": 121654
+      "topicsCount": 121658
     },
     {
       "id": 618,
@@ -1561,7 +1561,7 @@ export const categoriesData: CategoriesData = {
       "conversation_type": [
         "question"
       ],
-      "topicsCount": 3245
+      "topicsCount": 3247
     },
     {
       "id": 647,
@@ -1583,7 +1583,7 @@ export const categoriesData: CategoriesData = {
         "conversation",
         "idea"
       ],
-      "topicsCount": 65033
+      "topicsCount": 65036
     },
     {
       "id": 653,
@@ -1637,7 +1637,7 @@ export const categoriesData: CategoriesData = {
       "conversation_type": [
         "question"
       ],
-      "topicsCount": 76181
+      "topicsCount": 76184
     },
     {
       "id": 672,
@@ -1649,7 +1649,7 @@ export const categoriesData: CategoriesData = {
         "question",
         "idea"
       ],
-      "topicsCount": 64985
+      "topicsCount": 64987
     },
     {
       "id": 677,
@@ -1661,7 +1661,7 @@ export const categoriesData: CategoriesData = {
         "question",
         "idea"
       ],
-      "topicsCount": 27046
+      "topicsCount": 27050
     },
     {
       "id": 682,
@@ -1716,7 +1716,7 @@ export const categoriesData: CategoriesData = {
         "conversation",
         "question"
       ],
-      "topicsCount": 4271
+      "topicsCount": 4273
     },
     {
       "id": 704,
@@ -1739,7 +1739,7 @@ export const categoriesData: CategoriesData = {
         "question",
         "idea"
       ],
-      "topicsCount": 130795
+      "topicsCount": 130792
     },
     {
       "id": 714,
@@ -1759,7 +1759,7 @@ export const categoriesData: CategoriesData = {
       "conversation_type": [
         "question"
       ],
-      "topicsCount": 557
+      "topicsCount": 558
     },
     {
       "id": 720,
@@ -1791,7 +1791,7 @@ export const categoriesData: CategoriesData = {
         "question",
         "idea"
       ],
-      "topicsCount": 101030
+      "topicsCount": 101039
     },
     {
       "id": 731,
@@ -1802,7 +1802,7 @@ export const categoriesData: CategoriesData = {
         "conversation",
         "question"
       ],
-      "topicsCount": 4117
+      "topicsCount": 4118
     },
     {
       "id": 735,
@@ -1890,7 +1890,7 @@ export const categoriesData: CategoriesData = {
         "conversation",
         "idea"
       ],
-      "topicsCount": 799
+      "topicsCount": 795
     },
     {
       "id": 339,
@@ -1902,7 +1902,7 @@ export const categoriesData: CategoriesData = {
         "conversation",
         "idea"
       ],
-      "topicsCount": 107
+      "topicsCount": 105
     },
     {
       "id": 342,
@@ -1914,7 +1914,7 @@ export const categoriesData: CategoriesData = {
         "conversation",
         "idea"
       ],
-      "topicsCount": 94
+      "topicsCount": 89
     },
     {
       "id": 345,
@@ -2082,7 +2082,7 @@ export const categoriesData: CategoriesData = {
         "conversation",
         "idea"
       ],
-      "topicsCount": 1792
+      "topicsCount": 1789
     },
     {
       "id": 397,
@@ -2164,7 +2164,7 @@ export const categoriesData: CategoriesData = {
         "conversation",
         "idea"
       ],
-      "topicsCount": 2718
+      "topicsCount": 2714
     },
     {
       "id": 424,
@@ -2196,7 +2196,7 @@ export const categoriesData: CategoriesData = {
         "conversation",
         "idea"
       ],
-      "topicsCount": 2718
+      "topicsCount": 2713
     },
     {
       "id": 434,
@@ -2383,7 +2383,7 @@ export const categoriesData: CategoriesData = {
       "topicsCount": 0
     }
   ],
-  "lastUpdated": "2026-05-12T20:58:49.164Z"
+  "lastUpdated": "2026-05-13T14:46:05.924Z"
 };
 
 export const categories: Category[] = categoriesData.categories;
