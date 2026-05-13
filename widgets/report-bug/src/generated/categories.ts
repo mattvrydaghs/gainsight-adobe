@@ -1,6 +1,6 @@
 /**
  * Auto-generated file - do not edit manually
- * Generated: 2026-05-13T14:42:13.346Z
+ * Generated: 2026-05-13T14:46:05.925Z
  * 
  * This file contains category data fetched at build time.
  * To regenerate, run: npm run fetch-categories
@@ -2383,7 +2383,7 @@ export const categoriesData: CategoriesData = {
       "topicsCount": 0
     }
   ],
-  "lastUpdated": "2026-05-13T14:42:13.345Z"
+  "lastUpdated": "2026-05-13T14:46:05.924Z"
 };
 
 export const categories: Category[] = categoriesData.categories;
